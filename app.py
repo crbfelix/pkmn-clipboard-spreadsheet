@@ -64,21 +64,26 @@ def generateClipboard(key,sheet,row):
     # Moves
     moves = ""
     if(str(jsonResult['Move_1']) != ""):
-        moves += "- " + str(jsonResult['Move_1']) + '</br>'
+        moves += "- " + str(jsonResult['Move_1']) + '\n'
     if(str(jsonResult['Move_2']) != ""):
-        moves += "- " + str(jsonResult['Move_2']) + '</br>'
+        moves += "- " + str(jsonResult['Move_2']) + '\n'
     if(str(jsonResult['Move_3']) != ""):
-        moves += "- " + str(jsonResult['Move_3']) + '</br>'
+        moves += "- " + str(jsonResult['Move_3']) + '\n'
     if(str(jsonResult['Move_4']) != ""):
         moves += "- " + str(jsonResult['Move_4'])
 
-    info = nickname + " (" + species + ")" + gender + item + "</br> Shiny: " + shiny + "</br>" + natural
+    info = nickname + " (" + species + ")" + gender + item + "\nShiny: " + shiny + "\n" + natural
     ivInfo = "IVs: " + iv_hp + " HP / " + iv_atk + " Atk / " + iv_def + " Def / " + iv_spA + " SpA / " + iv_spD + " SpD / " + iv_spE + " Spe"
     evInfo = "EVs: " + ev_hp + " HP / " + ev_atk + " Atk / " + ev_def + " Def / " + ev_spA + " SpA / " + ev_spD + " SpD / " + ev_spE + " Spe"
     abilityInfo = "Ability: " + ability
     levelInfo = "Level: " + level
 
-    return info + "</br>" + ivInfo + "</br>" + evInfo + "</br>" + abilityInfo + "</br>" + levelInfo + "</br>" + moves
+    result = info + "\n" + ivInfo + "\n" + evInfo + "\n" + abilityInfo + "\n" + levelInfo + "\n" + moves
+    resultHtml = result.replace("\n","</br>")
+
+    webPage = "<title>PKHEX Generator</title><style>header{text-align: center;}footer{font-family: \"Helvetica Neue\", Arial, sans-serif;position: absolute; left:0; right: 0; padding: 1rem; bottom: 0;background-color: #efefef;text-align: center;}.btnWrapper{text-align: center;}script{display: none;}.data {border-style: inset; width: 600px; margin: auto;}</style><script src=\"https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js\"></script><header><h1>"+ species  +" \'s Clipboard information</h1></header><div class=\"data\"> "+ resultHtml +"</div></br><div class=\"btnWrapper\"><button class=\"btn\" data-clipboard-text=\""+ result +"\">Copy to clipboard</button></div><script type=\"text/javascript\">	var clip = new Clipboard('.btn');</script><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
+
+    return webPage
 
 if __name__ == "__main__":
 	app.run()
