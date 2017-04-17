@@ -1,0 +1,14 @@
+{
+  "name": "PKHEX Spreadsheet generator",
+  "description": "A RESTful API that generate clipboard link from spreadsheet data.",
+  "keywords": [
+    "flask",
+    "python",
+    "spreadsheet",
+	"google",
+	"pokemon",
+	"showdown",
+	"pkhex"
+  ],
+  "repository": "https://github.com/N3evin/pkhex-spreadsheet",
+}

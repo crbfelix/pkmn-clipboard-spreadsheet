@@ -3,6 +3,8 @@ A simple RESTful API that generate pkhex clipboard from google spreadsheet infor
 
 Hosted API: [http://funfair91.pythonanywhere.com/](http://funfair91.pythonanywhere.com/)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Requirements:
 - Python 2.X or 3.X
 - [Flask](http://flask.pocoo.org/)
