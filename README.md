@@ -20,4 +20,4 @@ Hosted API: [http://funfair91.pythonanywhere.com/](http://funfair91.pythonanywhe
 - [JSON script source](https://script.google.com/d/143u0RLuppsmYJ0B3wzo6i0jZYSfIFV2NLJMHPM-Sqczpr9bLwdffc-Wx/edit?usp=sharing)
 
 ### Output:
-![alt tag](https://raw.githubusercontent.com/N3evin/pkhex-spreadsheet-genearator/master/output.PNG)
+![alt tag](https://raw.githubusercontent.com/N3evin/pkhex-spreadsheet/master/output.PNG)
