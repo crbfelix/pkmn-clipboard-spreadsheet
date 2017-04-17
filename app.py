@@ -8,11 +8,11 @@ import requests
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return "<h1>Welcome to PKHEX clipboard generator by <a href=\"https://github.com/N3evin\">N3evin</a></h1><div><fieldset><legend>Generate PKHEX clipboard format data</legend><p><h2>/api/pkhex/{spreadsheet id}/{sheet name}/{row}</h2></p><ul><li><b>spreadsheet id:</b> id from spreadsheet url.</li><li><b>sheetname:</b> sheet name from spreadsheet to read from.</li><li><b>row:</b> which row of spreadsheet to retrieve information from.</li></ul></fieldset></div>"
+def index():
+    return "<title>PKHEX Generator</title><h1>Welcome to PKHEX clipboard generator by <a href=\"https://github.com/N3evin\">N3evin</a></h1><div><fieldset><legend>Generate PKHEX clipboard format data</legend><p><h2>/api/pkhex/{spreadsheet id}/{sheet name}/{row}</h2></p><ul><li><b>spreadsheet id:</b> id from spreadsheet url.</li><li><b>sheetname:</b> sheet name from spreadsheet to read from.</li><li><b>row:</b> which row of spreadsheet to retrieve information from.</li></ul></fieldset></div>"
 
 @app.route('/api/pkhex/<string:key>/<string:sheet>/<int:row>', methods=['GET'])
-def readData(key,sheet,row):
+def generateClipboard(key,sheet,row):
     website = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=" + key + "&sheet="+sheet
     r = requests.get(website)
     jsonResult = r.json()[sheet][row-1]
