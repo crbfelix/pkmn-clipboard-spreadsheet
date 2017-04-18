@@ -63,13 +63,13 @@ def generateClipboard(key,sheet,row):
     ev_spE = str(jsonResult['EV_Spe'])
 
     # Check stats
+    statsList = [iv_hp, iv_atk, iv_def, iv_spA, iv_spD, iv_spE, ev_hp, ev_atk, ev_def, ev_spA, ev_spD, ev_spE]
     try:
-        statsList = [iv_hp, iv_atk, iv_def, iv_spA, iv_spD, iv_spE, ev_hp, ev_atk, ev_def, ev_spA, ev_spD, ev_spE]
-        for stats in statsList:
-            if(stats == "" or stats == " " or int(stats) < 0):
-                stats = "0"
-            elif(int(stats) > 31):
-                stats = "31"
+        for i in range(len(statsList)):
+            if(statsList[i] == "" or statsList[i] == " " or int(statsList[i]) < 0):
+                statsList[i] = "0"
+            elif(int(statsList[i]) > 31):
+                statsList[i] = "31"
     except Exception:
         return errorPage
 
