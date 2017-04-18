@@ -1,7 +1,8 @@
 # PKHEX Google Spreadsheet Clipboard Generator
 A simple RESTful API that generate pkhex clipboard from google spreadsheet informations.
 
-Hosted API: [http://funfair91.pythonanywhere.com/](http://funfair91.pythonanywhere.com/)
+Hosted API: [https://pkhex.herokuapp.com](https://pkhex.herokuapp.com)
+Example: [https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet1/1](https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet1/1)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
