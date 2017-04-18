@@ -12,7 +12,11 @@ def index():
 def generateClipboard(key,sheet,row):
     website = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=" + key + "&sheet="+sheet
     r = requests.get(website)
-    jsonResult = r.json()[sheet][row-1]
+
+    try:
+        jsonResult = r.json()[sheet][row-1]
+    except Exception:
+        return "<title>PKHEX Generator</title><style>footer{font-family: \"Helvetica Neue\", Arial, sans-serif;position: absolute; left:0; right: 0; padding: 1rem; bottom: 0;background-color: #efefef;text-align: center;}</style><h2 align=\"center\">No pokemon found!</h2><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
 
     # information
     nickname = jsonResult['Nickname']
