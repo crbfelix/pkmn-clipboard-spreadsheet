@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask, send_from_directory
 import requests, os
 
@@ -64,7 +66,7 @@ def generateClipboard(key,sheet,row):
         species = species[:-2]
     elif(species.lower() == "farfetch'd"):              # farfetch'd have a special name.
         speciesImage = "farfetchd"
-    elif(species.lower() == "oricorio-pa\’u"):           # oricorio-pa’u have a special name.
+    elif(species.lower() == "oricorio-pa’u"):           # oricorio-pa’u have a special name.
         speciesImage = "oricorio-pa-u"
     elif("." in species.lower()):                       # For Mr. Mine and Mime Jr.
         species = species.title()
