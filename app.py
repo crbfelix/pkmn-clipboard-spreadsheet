@@ -1,5 +1,3 @@
-# encoding=utf8
-
 from flask import Flask, send_from_directory
 import requests, os
 
@@ -58,15 +56,15 @@ def generateClipboard(key,sheet,row):
         speciesImage = speciesImage.rsplit('-', 1)[0] + "-exclamation"
     elif ("-?" in species.lower()):                     # Unknown-?
         speciesImage = speciesImage.rsplit('-', 1)[0] + "-question"
-    elif ("\u2640" in species.lower()):                 # with female sign
-        speciesImage = "female/" + speciesImage[:-2]
-        species = species[:-2]
-    elif ("\u2642" in species.lower()):                 # with male sign
-        speciesImage = speciesImage[:-2]
+    elif ("frillish" in species.lower() or "jellicent" in species.lower() or "pyroar" in species.lower() or "meowstic" in species.lower()):                 # with female/male sign
+        if("f" in gender.lower()):
+            speciesImage = "female/" + speciesImage[:-2]
+        else:
+            speciesImage = speciesImage[:-2]
         species = species[:-2]
     elif(species.lower() == "farfetch'd"):              # farfetch'd have a special name.
         speciesImage = "farfetchd"
-    elif('\u2019' in species.lower() and "oricorio" in species.lower()):# oricorio-pau have a special name.
+    elif("oricorio-pa" in species.lower()):# oricorio-pau have a special name.
         speciesImage = "oricorio-pa-u"
     elif("." in species.lower()):                       # For Mr. Mine and Mime Jr.
         species = species.title()
