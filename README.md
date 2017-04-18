@@ -1,8 +1,8 @@
-# PKHEX Google Spreadsheet Clipboard Generator
+# Pokemon's Google Spreadsheet Clipboard Generator
 
 ![Heroku](http://heroku-badge.herokuapp.com/?app=pkhex&style=flat&svg=1)
 
-A simple RESTful API that generate pkhex clipboard from google spreadsheet informations.
+A simple website that generate pkhex/pokemon showdown clipboard from google spreadsheet informations.
 
 Hosted API : [https://pkhex.herokuapp.com](https://pkhex.herokuapp.com) 
 
