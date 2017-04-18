@@ -30,10 +30,10 @@ def generateClipboard(key,sheet,row):
     genderImage = ""
     if(gender.lower()=="male" or gender.lower()=="m"):
         gender = " (M)"
-        genderImage = "♂"
+        genderImage = "\u2642"
     elif(gender.lower()=="female" or gender.lower()=="f"):
         gender=" (F)"
-        genderImage = "♀"
+        genderImage = "\u2640"
     else:
         gender = ""
 
