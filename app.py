@@ -62,6 +62,17 @@ def generateClipboard(key,sheet,row):
     ev_spD = str(jsonResult['EV_SpD'])
     ev_spE = str(jsonResult['EV_Spe'])
 
+    # Check stats
+    try:
+        statsList = [iv_hp, iv_atk, iv_def, iv_spA, iv_spD, iv_spE, ev_hp, ev_atk, ev_def, ev_spA, ev_spD, ev_spE]
+        for stats in statsList:
+            if(stats == "" or stats == " " or int(stats) < 0):
+                stats = "0"
+            elif(int(stats) > 31):
+                stats = "31"
+    except Exception:
+        return errorPage
+
     try:
         #Hidden power Type
         hiddenPowerType = (((jsonResult['IV_HP']%2)+((jsonResult['IV_Atk']%2)*2) +((jsonResult['IV_Def']%2)*4) +((jsonResult['IV_Spe']%2)*8) +((jsonResult['IV_SpA']%2)*16)+((jsonResult['IV_SpD']%2)*32)) * 15)//63
