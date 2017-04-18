@@ -18,19 +18,12 @@ Example: [https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvS
 - [Flask](http://flask.pocoo.org/)
 
 ### Template:
-[Google Spreadsheet](https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/edit?usp=sharing)
+You can use this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/edit?usp=sharing) to configure your spreadsheet information into the "config" sheet and you are good to go.
 
 ### Setup:
-1. Just create a template copy from above and config it.
-
-or
-
 1. Run "app.py" to start the webservice.
 2. Put in the information required in the spreadsheet boxes.
 
-or
-
-1. Click on "Deploy to Heroku"
 
 ### Credit:
 - [JSON script source](https://script.google.com/d/143u0RLuppsmYJ0B3wzo6i0jZYSfIFV2NLJMHPM-Sqczpr9bLwdffc-Wx/edit?usp=sharing)
