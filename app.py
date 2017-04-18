@@ -19,7 +19,7 @@ def generateClipboard(key,sheet,row):
     species = jsonResult['Species']
     gender = jsonResult['Gender']
     item = " @ " + jsonResult['Item']
-    natural = jsonResult['Nature'] + " Nature"
+    nature = jsonResult['Nature'] + " Nature"
     shiny = jsonResult['Shiny']
 
     # Check for item.
@@ -27,10 +27,13 @@ def generateClipboard(key,sheet,row):
         item = ""
 
     # Check for gender
+    genderImage = ""
     if(gender.lower()=="male" or gender.lower()=="m"):
         gender = " (M)"
+        genderImage = "♂"
     elif(gender.lower()=="female" or gender.lower()=="f"):
         gender=" (F)"
+        genderImage = "♀"
     else:
         gender = ""
 
@@ -69,7 +72,9 @@ def generateClipboard(key,sheet,row):
     if(str(jsonResult['Move_4']) != ""):
         moves += "- " + str(jsonResult['Move_4'])
 
-    info = nickname + " (" + species + ")" + gender + item + "\nShiny: " + shiny + "\n" + natural
+    # HTML information
+
+    info = nickname + " (" + species + ")" + gender + item + "\nShiny: " + shiny + "\n" + nature
     ivInfo = "IVs: " + iv_hp + " HP / " + iv_atk + " Atk / " + iv_def + " Def / " + iv_spA + " SpA / " + iv_spD + " SpD / " + iv_spE + " Spe"
     evInfo = "EVs: " + ev_hp + " HP / " + ev_atk + " Atk / " + ev_def + " Def / " + ev_spA + " SpA / " + ev_spD + " SpD / " + ev_spE + " Spe"
     abilityInfo = "Ability: " + ability
@@ -78,9 +83,15 @@ def generateClipboard(key,sheet,row):
     result = info + "\n" + ivInfo + "\n" + evInfo + "\n" + abilityInfo + "\n" + levelInfo + "\n" + moves
     resultHtml = result.replace("\n","</br>")
 
-    webPage = "<title>PKHEX Generator</title><style>header{text-align: center;}footer{font-family: \"Helvetica Neue\", Arial, sans-serif;position: absolute; left:0; right: 0; padding: 1rem; bottom: 0;background-color: #efefef;text-align: center;}.btnWrapper{text-align: center;}script{display: none;}.data {border-style: inset; width: 600px; margin: auto;}.popup {position: relative;display: inline-block;cursor: pointer;}.popup .popuptext {visibility: hidden;width: 160px;background-color: #555;color: #fff;text-align: center;	border-radius: 6px;	padding: 8px 0;	position: absolute;z-index: 1;	bottom: -225%;left: 50%;margin-left: -80px;	} .popup .popuptext::after {content: "";position: absolute;bottom: 100%;left: 50%;margin-left: -155px;border-width: 5px;border-style: solid; border-color: transparent transparent #555 transparent;}.popup .show {visibility: visible;-webkit-animation: fadeIn 1s;animation: fadeIn 1s}@-webkit-keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}@keyframes fadeIn {from {opacity: 0;}to {opacity:1 ;}}</style><script src=\"https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js\"></script><header><h1>"+ species  +" \'s Clipboard information</h1></header><div class=\"data\"> "+ resultHtml +"</div></br><div class=\"btnWrapper\"><button class=\"popup\" onclick=\"myFunction()\" data-clipboard-text=\""+ result +"\">Copy to clipboard <span class=\"popuptext\" id=\"myPopup\">Copied!</span></button></div><script type=\"text/javascript\">var clip = new Clipboard('.popup'); function myFunction() {var popup = document.getElementById(\"myPopup\");popup.classList.toggle(\"show\");}</script><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
+    # Check if shiny set shiny image
+    pokemonImage = "https://img.pokemondb.net/sprites/x-y/normal/"+ species.lower() +".png"
+    if(shiny.lower() == "y" or shiny.lower() == "yes"):
+        pokemonImage ="https://img.pokemondb.net/sprites/x-y/shiny/"+ species.lower() +".png"
+
+
+    webPage = "<title>PKHEX Generator</title><style>header { text-align: center;}footer { font-family: \"Helvetica Neue\", Arial, sans-serif; position: absolute; left: 0; right: 0; padding: 1rem; bottom: 0; background-color: #efefef; text-align: center;}table{border: 1px solid black; margin-left: auto; margin-right: auto;}.tableHeader{font-family: \"Lucida Console\", Monaco, monospace}.btnWrapper { text-align: center;}script { display: none;}.data { border-style: inset; width: 600px; margin: auto;}.popup { position: relative; display: inline-block; cursor: pointer;}.popup .popuptext { visibility: hidden; width: 160px; background-color: #555; color: #fff; text-align: center; border-radius: 6px; padding: 8px 0; position: absolute; z-index: 1; bottom: -225%; left: 50%; margin-left: -80px;}.popup .popuptext::after { content: ""; position: absolute; bottom: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent #555 transparent;}.popup .show { visibility: visible; -webkit-animation: fadeIn 1s; animation: fadeIn 1s}@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}</style><script src=\"https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js\"></script><header> <h1>"+ species +" \'s Clipboard information</h1></header><div class=\"data\"> "+ resultHtml +"</div></br><table width=\"auto\"> <tr> <td width=\"190\" class=\"tableHeader\">"+ species + " " + genderImage +"</td> <td class=\"tableHeader\" width=\"150\" style=\"padding-left:10px\">Level:</td> <td width=\"186\">"+ level +"</td> <td width=\"150\" class=\"tableHeader\">Moves:</td> <td width=\"40\">Hp</td> <td width=\"40\">Atk</td> <td width=\"40\">Def</td> <td width=\"40\">SpA</td> <td width=\"40\">SpD</td> <td width=\"40\">Spe</td> </tr> <tr> <td rowspan=\"4\" align=\"middle\" background=\"http://orig09.deviantart.net/fd1f/f/2014/323/2/0/x_and_y_menu_background_1_by_phoenixoflight92-d86y3jj.png\"><img src =\""+ pokemonImage +"\"></img></td> <td class=\"tableHeader\" style=\"padding-left:10px\">Ability:</td> <td>"+ ability +"</td> <td>" + str(jsonResult['Move_1']) + "</td> <td>" + iv_hp +"</td> <td>" + iv_atk + "</td> <td>" + iv_def + "</td> <td>" + iv_spA + "</td> <td>" + iv_spD + "</td> <td>" + iv_spE + "</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px\">Nature:</td> <td>"+ nature +"</td> <td>" + str(jsonResult['Move_2']) + "</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px\">Item Held:</td> <td>"+ item[2:] + "</td> <td>" + str(jsonResult['Move_3']) + "</td> <td>Hp</td> <td>Atk</td> <td>Def</td> <td>SpA</td> <td>SpD</td> <td>Spe</td> </tr> <tr> <td>&nbsp;</td> <td>&nbsp;</td> <td>"+ str(jsonResult['Move_4']) +" <td>" + ev_hp + "</td> <td>" + ev_atk + "</td> <td>" + ev_def + "</td> <td>" + ev_spA + "</td> <td>" + ev_spD + "</td> <td>" + ev_spE + "</td> </tr></table></br><div class=\"btnWrapper\"> <button class=\"popup\" onclick=\"myFunction()\" data-clipboard-text="" + result + "">Copy to clipboard <span class=\"popuptext\" id=\"myPopup\">Copied!</span></button></div><script type = \"text/javascript\" > var clip = new Clipboard('.popup');function myFunction() {var popup = document.getElementById(\"myPopup\");popup.classList.toggle(\"show\");} </script><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
 
     return webPage
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True)
