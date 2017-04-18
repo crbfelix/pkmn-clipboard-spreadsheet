@@ -66,6 +66,10 @@ def generateClipboard(key,sheet,row):
         speciesImage = "farfetchd"
     elif(species.lower() == "oricorio-pa’u"):           # oricorio-pa’u have a special name.
         speciesImage = "oricorio-pa-u"
+    elif("." in species.lower()):                       # For Mr. Mine and Mime Jr.
+        species = species.title()
+        speciesImage = species.replace(".","")
+        speciesImage = speciesImage.replace(" ","-")
 
     # IV
     iv_hp = str(jsonResult['IV_HP'])
