@@ -13,10 +13,13 @@ def generateClipboard(key,sheet,row):
     website = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=" + key + "&sheet="+sheet
     r = requests.get(website)
 
+    errorPage = "<title>PKHEX Generator</title><style>footer{font-family: \"Helvetica Neue\", Arial, sans-serif;position: absolute; left:0; right: 0; padding: 1rem; bottom: 0;background-color: #efefef;text-align: center;}</style><h2 align=\"center\">No pokemon found!</h2><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
+
+
     try:
         jsonResult = r.json()[sheet][row-1]
     except Exception:
-        return "<title>PKHEX Generator</title><style>footer{font-family: \"Helvetica Neue\", Arial, sans-serif;position: absolute; left:0; right: 0; padding: 1rem; bottom: 0;background-color: #efefef;text-align: center;}</style><h2 align=\"center\">No pokemon found!</h2><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/\">N3evin</a></footer>"
+        return errorPage
 
     # information
     nickname = jsonResult['Nickname']
@@ -59,8 +62,11 @@ def generateClipboard(key,sheet,row):
     ev_spD = str(jsonResult['EV_SpD'])
     ev_spE = str(jsonResult['EV_Spe'])
 
-    #Hidden power Type
-    hiddenPowerType = (((jsonResult['IV_HP']%2)+((jsonResult['IV_Atk']%2)*2) +((jsonResult['IV_Def']%2)*4) +((jsonResult['IV_Spe']%2)*8) +((jsonResult['IV_SpA']%2)*16)+((jsonResult['IV_SpD']%2)*32)) * 15)//63
+    try:
+        #Hidden power Type
+        hiddenPowerType = (((jsonResult['IV_HP']%2)+((jsonResult['IV_Atk']%2)*2) +((jsonResult['IV_Def']%2)*4) +((jsonResult['IV_Spe']%2)*8) +((jsonResult['IV_SpA']%2)*16)+((jsonResult['IV_SpD']%2)*32)) * 15)//63
+    except Exception:
+        return errorPage
 
     # Ability
     ability = str(jsonResult['Ability'])
