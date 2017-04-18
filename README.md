@@ -30,6 +30,6 @@ You can use this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1Uh
 - [JSON script source](https://script.google.com/d/143u0RLuppsmYJ0B3wzo6i0jZYSfIFV2NLJMHPM-Sqczpr9bLwdffc-Wx/edit?usp=sharing)
 
 ### Output:
-Example: [https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet2/1](https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet2/1)
+<iframe width="800" height="650" src="https://pkhex.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet2/1"></iframe>
 
-![alt tag](https://raw.githubusercontent.com/N3evin/pkhex-spreadsheet/master/output.PNG)
+
