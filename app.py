@@ -1,7 +1,6 @@
 from flask import Flask
 import requests
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -45,7 +44,6 @@ def generateClipboard(key,sheet,row):
         gender = ""
 
 
-
     # IV
     iv_hp = str(jsonResult['IV_HP'])
     iv_atk = str(jsonResult['IV_Atk'])
@@ -62,19 +60,8 @@ def generateClipboard(key,sheet,row):
     ev_spD = str(jsonResult['EV_SpD'])
     ev_spE = str(jsonResult['EV_Spe'])
 
-    # Check stats
-    statsList = [iv_hp, iv_atk, iv_def, iv_spA, iv_spD, iv_spE, ev_hp, ev_atk, ev_def, ev_spA, ev_spD, ev_spE]
+    #Hidden power Type
     try:
-        for i in range(len(statsList)):
-            if(statsList[i] == "" or statsList[i] == " " or int(statsList[i]) < 0):
-                statsList[i] = "0"
-            elif(int(statsList[i]) > 31):
-                statsList[i] = "31"
-    except Exception:
-        return errorPage
-
-    try:
-        #Hidden power Type
         hiddenPowerType = (((jsonResult['IV_HP']%2)+((jsonResult['IV_Atk']%2)*2) +((jsonResult['IV_Def']%2)*4) +((jsonResult['IV_Spe']%2)*8) +((jsonResult['IV_SpA']%2)*16)+((jsonResult['IV_SpD']%2)*32)) * 15)//63
     except Exception:
         return errorPage
