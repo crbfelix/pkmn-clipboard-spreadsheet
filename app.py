@@ -31,7 +31,7 @@ def generateClipboard(key,sheet,row):
         item = ""
 
     # Check for gender
-    genderImage = ""
+    genderImage = "https://www.transparenttextures.com/patterns/asfalt-light.png"
     if(gender.lower()=="male" or gender.lower()=="m"):
         gender = " (M)"
         genderImage = "http://cdn.mysitemyway.com/icons-watermarks/simple-black/classica/classica_mars-symbol/classica_mars-symbol_simple-black_256x256.png"
