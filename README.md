@@ -16,7 +16,7 @@ Hosted API : [https://pkmnclipboard.herokuapp.com](https://pkmnclipboard.herokua
 
 
 ### Template
-You can use this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/edit?usp=sharing) to configure your spreadsheet information into the "config" sheet and you are good to go.
+You can use this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/edit?usp=sharing) to configure your spreadsheet information into the `config` sheet and you are good to go.
 
 
 ### Usage
