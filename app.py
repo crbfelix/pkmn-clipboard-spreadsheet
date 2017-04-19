@@ -135,9 +135,15 @@ def generateClipboard(key,sheet,row):
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
 def pokemon(species):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
+    # Detect Farfetch'd weird name.
     if ("farfetch" in species.lower()):
         pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
 
+    # Detect Flabébé name to normal english
+    if (species.lower() == "flabebe"):
+        species.replace("e", "é")
+
+    # For pokemon with spaces in name and check again.
     if len(pkmn) == 0:
         species = species.replace("-", " ")
         pkmn = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
