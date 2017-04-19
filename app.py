@@ -134,8 +134,6 @@ def generateClipboard(key,sheet,row):
 # Get pokmon by species name
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
 def pokemon(species):
-    species = species.replace("-", " ");
-
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'] == species.title() or pkmn['name'] == species.title())]
     if ("farfetch" in species.lower()):
         pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
