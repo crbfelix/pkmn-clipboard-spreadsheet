@@ -134,13 +134,13 @@ def generateClipboard(key,sheet,row):
 # Get pokmon by species name
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
 def pokemon(species):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'] == species.title() or pkmn['name'] == species.title())]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
     if ("farfetch" in species.lower()):
         pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
 
     if len(pkmn) == 0:
         species = species.replace("-", " ")
-        pkmn = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'] == species.title() or pkmn['name'] == species.title())]
+        pkmn = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
 
     if len(pkmn) == 0:
         abort(404)
