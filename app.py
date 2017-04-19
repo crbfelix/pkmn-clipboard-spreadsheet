@@ -6,8 +6,8 @@ app = Flask(__name__)
 pokemonData = None
 
 
-# Open database base file.
-with open('database.json', 'r', encoding='utf8') as file:
+# Open pokemon database file.
+with open('pokemon.json', 'r', encoding='utf8') as file:
     pokemonData = json.load(file)
     file.close()
 
@@ -57,7 +57,10 @@ def generateClipboard(key,sheet,row):
     pokemonImage = ""
     for data in pokemonData["pokemon"]:
         if data["name"] == name:
-            pokemonImage = data["regular_image"]
+            pokemonImage = data["image"]["regular"]
+            if(shiny.lower() == "yes" or shiny.lower() == "y"):
+                pokemonImage = data["image"]["shiny"]
+
             name = pokemonImage.rsplit("/")[-1].rsplit(".")[0].capitalize()
 
     # Check for gender
@@ -152,7 +155,7 @@ def pokemondex(dex):
 # Get pokemon by hidden ability
 @app.route('/api/v1/pokemon/hiddenability/<string:ability>', methods=['GET'])
 def pokemonhiddenability(ability):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['hidden_ability'] == ability.lower()]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['abilities']['hidden_ability'] == ability.lower()]
     if len(pkmn) == 0:
         abort(404)
     return jsonify({'Pokemon': pkmn})
@@ -160,7 +163,7 @@ def pokemonhiddenability(ability):
 # Get pokemon by ability
 @app.route('/api/v1/pokemon/ability/<string:ability>', methods=['GET'])
 def pokemonability(ability):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['ability1'] == ability or pkmn['ability2'] == ability.lower()) ]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['abilities']['ability1'] == ability or pkmn['abilities']['ability2'] == ability.lower()) ]
     if len(pkmn) == 0:
         abort(404)
     return jsonify({'Pokemon': pkmn})
@@ -168,7 +171,7 @@ def pokemonability(ability):
 # Get pokemon by type
 @app.route('/api/v1/pokemon/type/<string:type>', methods=['GET'])
 def pokemontype(type):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['type1'] == type.lower() or pkmn['type2'] == type.lower()) ]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['types']['type1'] == type.lower() or pkmn['types']['type2'] == type.lower()) ]
     if len(pkmn) == 0:
         abort(404)
     return jsonify({'Pokemon': pkmn})
@@ -183,5 +186,3 @@ def pokemongender(gender):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
