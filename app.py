@@ -139,6 +139,10 @@ def pokemon(species):
         pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
 
     if len(pkmn) == 0:
+        species = species.replace("-", " ")
+        pkmn = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'] == species.title() or pkmn['name'] == species.title())]
+
+    if len(pkmn) == 0:
         abort(404)
     return jsonify({'Pokemon': pkmn[0]})
 
