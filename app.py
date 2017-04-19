@@ -150,15 +150,15 @@ def pokemon(species):
 
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn[0]})
+    return jsonify({'Pokemon': pkmn})
 
 # Get pokemon by dex number
 @app.route('/api/v1/pokemon/<int:dex>', methods=['GET'])
 def pokemondex(dex):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == str(dex).zfill(3)]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == dex]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn[0]})
+    return jsonify({'Pokemon': pkmn})
 
 # Get pokemon by hidden ability
 @app.route('/api/v1/pokemon/hiddenability/<string:ability>', methods=['GET'])
