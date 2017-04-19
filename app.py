@@ -141,7 +141,7 @@ def pokemon(species):
 
     # Detect Flabébé name to normal english
     if (species.lower() == "flabebe"):
-        species.replace("e", "é")
+        species = species.replace("e", "é")
 
     # For pokemon with spaces in name and check again.
     if len(pkmn) == 0:
