@@ -90,3 +90,6 @@ ENV/
 
 # Pycharm
 .idea
+
+# Database builder
+database_builder/
