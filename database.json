@@ -630,7 +630,7 @@
 		{
 			"id": "052",
 			"name": "Meowth",
-			"species": "Meowstic",
+			"species": "Meowth",
 			"male": "yes",
 			"female": "yes",
 			"type1": "normal",
@@ -9419,7 +9419,7 @@
 		{
 			"id": "019",
 			"name": "Rattata-A",
-			"species": "Rattata",
+			"species": "Rattata-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "dark",
@@ -9430,7 +9430,7 @@
 		{
 			"id": "020",
 			"name": "Raticate-A",
-			"species": "Raticate",
+			"species": "Raticate-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "dark",
@@ -9441,7 +9441,7 @@
 		{
 			"id": "026",
 			"name": "Raichu-A",
-			"species": "Raichu",
+			"species": "Raichu-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "electric",
@@ -9452,7 +9452,7 @@
 		{
 			"id": "027",
 			"name": "Sandshrew-A",
-			"species": "Sandshrew",
+			"species": "Sandshrew-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ice",
@@ -9463,7 +9463,7 @@
 		{
 			"id": "028",
 			"name": "Sandslash-A",
-			"species": "Sandslash",
+			"species": "Sandslash-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ice",
@@ -9474,7 +9474,7 @@
 		{
 			"id": "037",
 			"name": "Vulpix-A",
-			"species": "Vulpix",
+			"species": "Vulpix-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ice",
@@ -9485,7 +9485,7 @@
 		{
 			"id": "038",
 			"name": "Ninetales-A",
-			"species": "Ninetales",
+			"species": "Ninetales-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ice",
@@ -9496,7 +9496,7 @@
 		{
 			"id": "050",
 			"name": "Diglett-A",
-			"species": "Diglett",
+			"species": "Diglett-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ground",
@@ -9507,7 +9507,7 @@
 		{
 			"id": "051",
 			"name": "Dugtrio-A",
-			"species": "Dugtrio",
+			"species": "Dugtrio-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "ground",
@@ -9518,7 +9518,7 @@
 		{
 			"id": "052",
 			"name": "Meowth-A",
-			"species": "Meowth",
+			"species": "Meowth-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "dark",
@@ -9529,7 +9529,7 @@
 		{
 			"id": "053",
 			"name": "Persian-A",
-			"species": "Persian",
+			"species": "Persian-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "dark",
@@ -9540,7 +9540,7 @@
 		{
 			"id": "074",
 			"name": "Geodude-A",
-			"species": "Geodude",
+			"species": "Geodude-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "rock",
@@ -9551,7 +9551,7 @@
 		{
 			"id": "075",
 			"name": "Graveler-A",
-			"species": "Graveler",
+			"species": "Graveler-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "rock",
@@ -9562,7 +9562,7 @@
 		{
 			"id": "076",
 			"name": "Golem-A",
-			"species": "Golem",
+			"species": "Golem-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "rock",
@@ -9573,7 +9573,7 @@
 		{
 			"id": "088",
 			"name": "Grimer-A",
-			"species": "Grimer",
+			"species": "Grimer-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "poison",
@@ -9584,7 +9584,7 @@
 		{
 			"id": "089",
 			"name": "Muk-A",
-			"species": "Pyukumuku",
+			"species": "Pyukumuku-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "poison",
@@ -9595,7 +9595,7 @@
 		{
 			"id": "103",
 			"name": "Exeggutor-A",
-			"species": "Exeggutor",
+			"species": "Exeggutor-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "grass",
@@ -9606,7 +9606,7 @@
 		{
 			"id": "105",
 			"name": "Marowak-A",
-			"species": "Marowak",
+			"species": "Marowak-A",
 			"male": "yes",
 			"female": "yes",
 			"type1": "fire",
