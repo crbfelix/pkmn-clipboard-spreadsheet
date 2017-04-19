@@ -1,0 +1,113 @@
+<link rel="shortcut icon" href="/favicon.ico">
+<title>Clipboard Generator</title>
+<style>
+	body {
+		position: relative;
+		margin: 0;
+		padding-bottom: 6rem;
+		min-height: 100%;
+	} 
+	footer { 
+		font-family: "Helvetica Neue", Arial, sans-serif;
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 1rem;
+		bottom: 0;
+		background-color: #efefef;
+		text-align: center;
+	}
+</style>
+<body>
+   <h1>Welcome to Pokemon Showdown Clipboard generator by <a href="https://github.com/N3evin">N3evin</a></h1>
+   <div>
+      <fieldset>
+         <legend>Generate Pokemon Showdown clipboard format data</legend>
+         <p>
+         <h2>/spreadsheet/{spreadsheet id}/{sheet name}/{row}</h2>
+         </p>
+         <ul>
+            <li><b>spreadsheet id:</b> id from spreadsheet url.</li>
+            <li><b>sheetname:</b> sheet name from spreadsheet to read from.</li>
+            <li><b>row:</b> which row of spreadsheet to retrieve information from.</li>
+            <li><b>return:</b> A website with pokemon information.</li>
+			<li><b>Google Spreadsheet:</b> <a href="https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4">template</a></li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get Pokemon from dex number</legend>
+         <p>
+         <h2>/api/v1/pokemon/{dex no}</h2>
+         </p>
+         <ul>
+            <li><b>dex no:</b> dex number of the Pokemon.</li>
+            <li><b>return:</b> json format of the pokemon.</li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get Pokemon from species name</legend>
+         <p>
+         <h2>/api/v1/pokemon/{name}</h2>
+         </p>
+         <ul>
+            <li><b>name:</b> name of the Pokemon.</li>
+            <li><b>return:</b> json format of the pokemon.</li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get all Pokemon with hidden ability</legend>
+         <p>
+         <h2>/api/v1/pokemon/hiddenability/{ability}</h2>
+         </p>
+         <ul>
+            <li><b>ability:</b> name of the hidden ability you looking for.</li>
+            <li><b>return:</b> json format of all the pokemon with hidden ability.</li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get all Pokemon with ability</legend>
+         <p>
+         <h2>/api/v1/pokemon/ability/{ability name}</h2>
+         </p>
+         <ul>
+            <li><b>ability name:</b> name of ability you looking for.</li>
+            <li><b>return:</b> json format of all the pokemon with ability.</li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get all Pokemon with type</legend>
+         <p>
+         <h2>/api/v1/pokemon/type/{type name}</h2>
+         </p>
+         <ul>
+            <li><b>type name:</b> name of the type you looking for.</li>
+            <li><b>return:</b> json format of all the pokemon with type.</li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get all Pokemon with gender</legend>
+         <p>
+         <h2>/api/v1/pokemon/gender/{gender type}</h2>
+         </p>
+         <ul>
+            <li><b>gender type:</b> male or female.</li>
+            <li><b>return:</b> json format of all the pokemon with gender.</li>
+         </ul>
+      </fieldset>
+   </div>
+</body>
+<footer>
+   Copyright &copy; <script> new Date().getFullYear() > 2010 && document.write(new Date().getFullYear()); </script>, <a href="https://github.com/N3evin/pkmn-clipboard-spreadsheet">N3evin</a>
+</footer>
