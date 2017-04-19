@@ -1,7 +1,14 @@
 from flask import Flask, send_from_directory
-import requests, os
+import requests, os, json
 
 app = Flask(__name__)
+
+pokemonData = None
+
+# Open json file.
+with open('database.json') as file:
+    pokemonData = json.load(file)
+    file.close()
 
 @app.route('/favicon.ico')
 def favicon():
@@ -146,4 +153,5 @@ def genderTextPokemon(speciesName):
     return False;
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	#app.run(debug=True)
+    print(pokemonData)
