@@ -179,7 +179,7 @@ def pokemontype(type):
 # Get pokemon by gender
 @app.route('/api/v1/pokemon/gender/<string:gender>', methods=['GET'])
 def pokemongender(gender):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn[gender.lower()] == "yes" ]
+    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['gender'][gender.lower()] == "yes" ]
     if len(pkmn) == 0:
         abort(404)
     return jsonify({'Pokemon': pkmn})
