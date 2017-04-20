@@ -22490,8 +22490,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "electric",
-        "type2": "flying"
+        "type1": "flying",
+        "type2": "none"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/tornadus-therian.png",
@@ -22520,8 +22520,8 @@
         "hidden_ability": "defiant"
       },
       "types": {
-        "type1": "dragon",
-        "type2": "fire"
+        "type1": "electric",
+        "type2": "flying"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/thundurus.png",
@@ -22550,8 +22550,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "dragon",
-        "type2": "electric"
+        "type1": "electric",
+        "type2": "flying"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/thundurus-therian.png",
@@ -22580,8 +22580,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "ground",
-        "type2": "flying"
+        "type1": "dragon",
+        "type2": "fire"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/reshiram.png",
@@ -22605,8 +22605,8 @@
         "spdef": 100
       },
       "abilities": {
-        "ability1": "teravolt",
-        "ability2": "none",
+        "ability1": "dragon",
+        "ability2": "electric",
         "hidden_ability": "none"
       },
       "types": {
@@ -22640,8 +22640,8 @@
         "hidden_ability": "sheer force"
       },
       "types": {
-        "type1": "water",
-        "type2": "fighting"
+        "type1": "ground",
+        "type2": "flying"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/landorus.png",
@@ -22670,8 +22670,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "normal",
-        "type2": "psychic"
+        "type1": "ground",
+        "type2": "flying"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/landorus-therian.png",
@@ -22700,8 +22700,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "normal",
-        "type2": "fighting"
+        "type1": "dragon",
+        "type2": "ice"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/kyurem.png",
@@ -22730,8 +22730,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "bug",
-        "type2": "steel"
+        "type1": "dragon",
+        "type2": "ice"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/kyurem-black.png",
@@ -22760,8 +22760,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "bug",
-        "type2": "steel"
+        "type1": "dragon",
+        "type2": "ice"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/kyurem-white.png",
@@ -22790,8 +22790,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "bug",
-        "type2": "steel"
+        "type1": "water",
+        "type2": "fighting"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/keldeo.png",
@@ -22820,8 +22820,8 @@
         "hidden_ability": "none"
       },
       "types": {
-        "type1": "bug",
-        "type2": "steel"
+        "type1": "water,
+        "type2": "fighting"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/keldeo-resolute.png",
