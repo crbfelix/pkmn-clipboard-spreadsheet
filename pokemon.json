@@ -2622,7 +2622,7 @@
         "hp": 95,
         "atk": 75,
         "spd": 30,
-        "spdef": 180
+        "spdef": 80
       },
       "abilities": {
         "ability1": "shell armor",
@@ -4087,12 +4087,12 @@
       },
       "species": "Pinsir",
       "stats": {
-        "def": 120,
-        "spatk": 65,
+        "def": 100,
+        "spatk": 55,
         "hp": 65,
-        "atk": 155,
-        "spd": 105,
-        "spdef": 90
+        "atk": 125,
+        "spd": 85,
+        "spdef": 70
       },
       "abilities": {
         "ability1": "hyper cutter",
@@ -4117,12 +4117,12 @@
       },
       "species": "Pinsir",
       "stats": {
-        "def": 100,
-        "spatk": 55,
+        "def": 120,
+        "spatk": 65,
         "hp": 65,
-        "atk": 125,
-        "spd": 85,
-        "spdef": 70
+        "atk": 155,
+        "spd": 105,
+        "spdef": 90
       },
       "abilities": {
         "ability1": "aerilate",
@@ -4240,7 +4240,7 @@
         "def": 109,
         "spatk": 70,
         "hp": 95,
-        "atk": 70,
+        "atk": 155,
         "spd": 81,
         "spdef": 130
       },
@@ -4927,7 +4927,7 @@
       },
       "species": "Mewtwo",
       "stats": {
-        "def": 120,
+        "def": 70,
         "spatk": 194,
         "hp": 106,
         "atk": 150,
@@ -8862,7 +8862,7 @@
         "hp": 100,
         "atk": 164,
         "spd": 71,
-        "spdef": 95
+        "spdef": 120
       },
       "abilities": {
         "ability1": "sand stream",
@@ -11290,9 +11290,9 @@
         "def": 70,
         "spatk": 110,
         "hp": 70,
-        "atk": 250,
+        "atk": 140,
         "spd": 105,
-        "spdef": 110
+        "spdef": 65
       },
       "abilities": {
         "ability1": "strong jaw",
@@ -11798,7 +11798,7 @@
       "species": "Altaria",
       "stats": {
         "def": 110,
-        "spatk": 70,
+        "spatk": 110,
         "hp": 75,
         "atk": 110,
         "spd": 80,
@@ -15967,7 +15967,7 @@
       },
       "species": "Lucario",
       "stats": {
-        "def": 70,
+        "def": 88,
         "spatk": 140,
         "hp": 70,
         "atk": 145,
@@ -17445,9 +17445,9 @@
         "spdef": 100
       },
       "abilities": {
-        "ability1": "pressure",
+        "ability1": "levitate",
         "ability2": "none",
-        "hidden_ability": "telepathy"
+        "hidden_ability": "none"
       },
       "types": {
         "type1": "ghost",
@@ -22717,7 +22717,7 @@
       },
       "species": "Kyurem-Black",
       "stats": {
-        "def": 90,
+        "def": 100,
         "spatk": 120,
         "hp": 125,
         "atk": 170,
@@ -22725,7 +22725,7 @@
         "spdef": 90
       },
       "abilities": {
-        "ability1": "turboblaze",
+        "ability1": "teravolt",
         "ability2": "none",
         "hidden_ability": "none"
       },
@@ -22755,7 +22755,7 @@
         "spdef": 100
       },
       "abilities": {
-        "ability1": "teravolt",
+        "ability1": "turboblaze",
         "ability2": "none",
         "hidden_ability": "none"
       },
@@ -23857,12 +23857,12 @@
       },
       "species": "Floette-Eternal",
       "stats": {
-        "def": 47,
-        "spatk": 75,
-        "hp": 54,
-        "atk": 45,
-        "spd": 52,
-        "spdef": 98
+        "def": 67,
+        "spatk": 125,
+        "hp": 74,
+        "atk": 65,
+        "spd": 92,
+        "spdef": 128
       },
       "abilities": {
         "ability1": "flower veil",
@@ -24257,7 +24257,7 @@
       "abilities": {
         "ability1": "keen eye",
         "ability2": "infiltrator",
-        "hidden_ability": "prankster"
+        "hidden_ability": "competitive"
       },
       "types": {
         "type1": "psychic",
@@ -25271,7 +25271,7 @@
         "spatk": 44,
         "hp": 44,
         "atk": 66,
-        "spd": 65,
+        "spd": 56,
         "spdef": 55
       },
       "abilities": {
@@ -25662,10 +25662,10 @@
         "hp": 54,
         "atk": 100,
         "spd": 115,
-        "spdef": 82
+        "spdef": 85
       },
       "abilities": {
-        "ability1": "none",
+        "ability1": "aura break",
         "ability2": "none",
         "hidden_ability": "power construct"
       },
@@ -25719,7 +25719,7 @@
       "stats": {
         "def": 121,
         "spatk": 91,
-        "hp": 100,
+        "hp": 216,
         "atk": 100,
         "spd": 85,
         "spdef": 95
@@ -25851,7 +25851,7 @@
       },
       "types": {
         "type1": "psychic",
-        "type2": "ghost"
+        "type2": "dark"
       },
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/hoopa-unbound.png",
@@ -25927,12 +25927,12 @@
       },
       "species": "Raticate-Alola",
       "stats": {
-        "def": 60,
-        "spatk": 50,
-        "hp": 55,
-        "atk": 81,
-        "spd": 97,
-        "spdef": 70
+        "def": 70,
+        "spatk": 40,
+        "hp": 75,
+        "atk": 71,
+        "spd": 77,
+        "spdef": 80
       },
       "abilities": {
         "ability1": "gluttony",
@@ -25957,12 +25957,12 @@
       },
       "species": "Raichu-Alola",
       "stats": {
-        "def": 55,
-        "spatk": 90,
+        "def": 50,
+        "spatk": 95,
         "hp": 60,
-        "atk": 90,
+        "atk": 85,
         "spd": 110,
-        "spdef": 80
+        "spdef": 85
       },
       "abilities": {
         "ability1": "surge surfer",
@@ -25987,12 +25987,12 @@
       },
       "species": "Sandshrew-Alola",
       "stats": {
-        "def": 85,
-        "spatk": 20,
+        "def": 90,
+        "spatk": 10,
         "hp": 50,
         "atk": 75,
         "spd": 40,
-        "spdef": 30
+        "spdef": 35
       },
       "abilities": {
         "ability1": "snow cloak",
@@ -26017,12 +26017,12 @@
       },
       "species": "Sandslash-Alola",
       "stats": {
-        "def": 110,
-        "spatk": 45,
+        "def": 120,
+        "spatk": 25,
         "hp": 75,
         "atk": 100,
         "spd": 65,
-        "spdef": 55
+        "spdef": 65
       },
       "abilities": {
         "ability1": "snow cloak",
@@ -26080,8 +26080,8 @@
         "def": 75,
         "spatk": 81,
         "hp": 73,
-        "atk": 76,
-        "spd": 100,
+        "atk": 67,
+        "spd": 109,
         "spdef": 100
       },
       "abilities": {
@@ -26107,11 +26107,11 @@
       },
       "species": "Diglett-Alola",
       "stats": {
-        "def": 25,
+        "def": 30,
         "spatk": 35,
         "hp": 10,
         "atk": 55,
-        "spd": 95,
+        "spd": 90,
         "spdef": 45
       },
       "abilities": {
@@ -26137,11 +26137,11 @@
       },
       "species": "Dugtrio-Alola",
       "stats": {
-        "def": 50,
+        "def": 60,
         "spatk": 50,
         "hp": 35,
         "atk": 100,
-        "spd": 120,
+        "spd": 110,
         "spdef": 70
       },
       "abilities": {
@@ -26168,9 +26168,9 @@
       "species": "Meowth-Alola",
       "stats": {
         "def": 35,
-        "spatk": 40,
+        "spatk": 50,
         "hp": 40,
-        "atk": 45,
+        "atk": 35,
         "spd": 90,
         "spdef": 40
       },
@@ -26198,9 +26198,9 @@
       "species": "Persian-Alola",
       "stats": {
         "def": 60,
-        "spatk": 65,
+        "spatk": 75,
         "hp": 65,
-        "atk": 70,
+        "atk": 60,
         "spd": 115,
         "spdef": 65
       },
@@ -26345,7 +26345,7 @@
         "female": "yes",
         "male": "yes"
       },
-      "species": "Pyukumuku-Alola",
+      "species": "Muk-Alola",
       "stats": {
         "def": 75,
         "spatk": 65,
@@ -26380,8 +26380,8 @@
         "def": 85,
         "spatk": 125,
         "hp": 95,
-        "atk": 95,
-        "spd": 55,
+        "atk": 105,
+        "spd": 45,
         "spdef": 75
       },
       "abilities": {
@@ -26416,7 +26416,7 @@
       },
       "abilities": {
         "ability1": "cursed body",
-        "ability2": "lightningrod",
+        "ability2": "lightning rod",
         "hidden_ability": "rock head"
       },
       "types": {
@@ -27298,6 +27298,36 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/wishiwashi.png"
       },
       "name": "Wishiwashi",
+      "id": 746
+    },
+    {
+      "gender": {
+        "female": "yes",
+        "male": "yes"
+      },
+      "species": "Wishiwashi-School",
+      "stats": {
+        "def": 130,
+        "spatk": 140,
+        "hp": 45,
+        "atk": 140,
+        "spd": 30,
+        "spdef": 135
+      },
+      "abilities": {
+        "ability1": "schooling",
+        "ability2": "none",
+        "hidden_ability": "none"
+      },
+      "types": {
+        "type1": "water",
+        "type2": "none"
+      },
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/wishiwashi-school.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/wishiwashi-school.png"
+      },
+      "name": "Wishiwashi-School",
       "id": 746
     },
     {
