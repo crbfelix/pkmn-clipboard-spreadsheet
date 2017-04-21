@@ -932,6 +932,186 @@
     },
     {
       "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Original",
+      "name": "Pikachu-Original",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-original-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-original-hat.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Hoenn",
+      "name": "Pikachu-Hoenn",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-hoenn-cap.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-hoenn-cap.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Sinnoh",
+      "name": "Pikachu-Sinnoh",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-sinnoh-cap.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-sinnoh-cap.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Unova",
+      "name": "Pikachu-Unova",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-unova-cap.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-unova-cap.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Kalos",
+      "name": "Pikachu-Kalos",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-kalos-cap.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-kalos-cap.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
+        "spdef": 50,
+        "spd": 90,
+        "spatk": 50,
+        "def": 40,
+        "atk": 55,
+        "hp": 35
+      },
+      "gender": {
+        "male": "true",
+        "female": "false"
+      },
+      "species": "Pikachu-Alola",
+      "name": "Pikachu-Alola",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-alola-cap.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-alola-cap.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "static"
+      },
+      "types": {
+        "type1": "electric",
+        "type2": "none"
+      },
+      "id": 25
+    },
+    {
+      "stats": {
         "spdef": 80,
         "spd": 110,
         "spatk": 90,
