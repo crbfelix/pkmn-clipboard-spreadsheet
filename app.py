@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, jsonify, abort
+from flask import Flask, send_from_directory, jsonify, abort, make_response
 import requests, os, json
 
 app = Flask(__name__)
@@ -22,6 +22,11 @@ def index():
 @app.route('/error')
 def error():
     return app.send_static_file('error.html')
+
+# Handle 404 as json or else Flash will use html as default.
+@app.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify({'error': 'Not found'}), 404)
 
 @app.route('/spreadsheet/<string:key>/<string:sheet>/<int:row>', methods=['GET'])
 def generateClipboard(key,sheet,row):
@@ -158,7 +163,7 @@ def pokemondex(dex):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == dex]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'pokemon': pkmn})
 
 # Get pokemon by hidden ability
 @app.route('/api/v1/pokemon/hiddenability/<string:ability>', methods=['GET'])
@@ -166,7 +171,7 @@ def pokemonhiddenability(ability):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['abilities']['hidden_ability'] == ability.lower()]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'pokemon': pkmn})
 
 # Get pokemon by ability
 @app.route('/api/v1/pokemon/ability/<string:ability>', methods=['GET'])
@@ -174,7 +179,7 @@ def pokemonability(ability):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['abilities']['ability1'] == ability or pkmn['abilities']['ability2'] == ability.lower()) ]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'pokemon': pkmn})
 
 # Get pokemon by type
 @app.route('/api/v1/pokemon/type/<string:type>', methods=['GET'])
@@ -182,7 +187,7 @@ def pokemontype(type):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['types']['type1'] == type.lower() or pkmn['types']['type2'] == type.lower()) ]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'pokemon': pkmn})
 
 # Get pokemon by gender
 @app.route('/api/v1/pokemon/gender/<string:gender>', methods=['GET'])
@@ -190,7 +195,7 @@ def pokemongender(gender):
     pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['gender'][gender.lower()] == "yes" ]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'pokemon': pkmn})
 
 if __name__ == "__main__":
     app.run(debug=True)

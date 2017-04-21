@@ -15212,6 +15212,36 @@
     },
     {
       "stats": {
+        "spdef": 78,
+        "spd": 85,
+        "spatk": 87,
+        "def": 70,
+        "atk": 60,
+        "hp": 70
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Cherrim-Sunshine",
+      "name": "Cherrim-Sunshine",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/cherrim-sunshine.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/cherrim-sunshine.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "flower gift"
+      },
+      "types": {
+        "type1": "grass",
+        "type2": "none"
+      },
+      "id": 421
+    },
+    {
+      "stats": {
         "spdef": 62,
         "spd": 34,
         "spatk": 57,
@@ -28442,6 +28472,36 @@
     },
     {
       "stats": {
+        "spdef": 100,
+        "spd": 60,
+        "spatk": 60,
+        "def": 100,
+        "atk": 60,
+        "hp": 60
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Minior-Meteor",
+      "name": "Minior-Meteor",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/minior.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/minior.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "shields down"
+      },
+      "types": {
+        "type1": "rock",
+        "type2": "flying"
+      },
+      "id": 774
+    },
+    {
+      "stats": {
         "spdef": 60,
         "spd": 120,
         "spatk": 100,
@@ -29510,6 +29570,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-bug.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29539,6 +29600,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-dark.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29568,6 +29630,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-dragon.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29597,6 +29660,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-electric.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29626,6 +29690,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-fairy.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29655,6 +29720,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-fighting.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29684,6 +29750,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-fire.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29713,6 +29780,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-flying.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29742,6 +29810,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-ghost.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29771,6 +29840,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-grass.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29800,6 +29870,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-ground.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29829,6 +29900,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-ice.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29858,6 +29930,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-poison.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29887,6 +29960,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-psychic.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29916,6 +29990,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-rock.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29945,6 +30020,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-steel.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -29974,6 +30050,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/arceus-water.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "multitype"
       },
@@ -30003,6 +30080,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/magearna-original.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "soul-heart"
       },
@@ -30025,35 +30103,6 @@
         "male": "none",
         "female": "none"
       },
-      "species": "Minior-Meteor",
-      "name": "Minior-Meteor",
-      "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/minior.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/minior.png"
-      },
-      "abilities": {
-        "ability2": "none",
-        "ability1": "shields down"
-      },
-      "types": {
-        "type1": "rock",
-        "type2": "flying"
-      },
-      "id": 774
-    },
-    {
-      "stats": {
-        "spdef": 90,
-        "spd": 125,
-        "spatk": 90,
-        "def": 80,
-        "atk": 125,
-        "hp": 90
-      },
-      "gender": {
-        "male": "none",
-        "female": "none"
-      },
       "species": "Silvally-Bug",
       "name": "Silvally-Bug",
       "image": {
@@ -30061,6 +30110,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-bug.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30090,6 +30140,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-dark.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30119,6 +30170,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-dragon.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30148,6 +30200,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-electric.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30177,6 +30230,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-fairy.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30206,6 +30260,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-fighting.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30235,6 +30290,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-fire.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30264,6 +30320,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-flying.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30293,6 +30350,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-ghost.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30322,6 +30380,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-grass.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30351,6 +30410,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-ground.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30380,6 +30440,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-ice.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30409,6 +30470,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-poison.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30438,6 +30500,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-psychic.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30467,6 +30530,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-rock.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30496,6 +30560,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-steel.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30525,6 +30590,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/silvally-water.png"
       },
       "abilities": {
+        "hidden_ability": "none",
         "ability2": "none",
         "ability1": "rks system"
       },
@@ -30554,6 +30620,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-archipelago.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30583,6 +30650,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-continental.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30612,6 +30680,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-elegant.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30641,6 +30710,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-fancy.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30670,6 +30740,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-garden.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30699,6 +30770,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-high-plains.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30728,6 +30800,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-jungle.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30757,6 +30830,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-marine.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30786,6 +30860,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30815,6 +30890,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-modern.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30844,6 +30920,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-monsoon.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30873,6 +30950,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-ocean.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30902,6 +30980,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-poke-ball.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30931,6 +31010,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-polar.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30960,6 +31040,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-river.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -30989,6 +31070,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-sandstorm.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -31018,6 +31100,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-savanna.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -31047,6 +31130,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-sun.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
@@ -31076,6 +31160,7 @@
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/vivillon-tundra.png"
       },
       "abilities": {
+        "hidden_ability": "friend guard",
         "ability2": "compound eyes",
         "ability1": "shield dust"
       },
