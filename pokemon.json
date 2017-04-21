@@ -25936,6 +25936,36 @@
       "species": "Xerneas",
       "name": "Xerneas",
       "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/xerneas-neutral.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/xerneas-neutral.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fairy aura"
+      },
+      "types": {
+        "type1": "fairy",
+        "type2": "none"
+      },
+      "id": 716
+    },
+    {
+      "stats": {
+        "spdef": 98,
+        "spd": 99,
+        "spatk": 131,
+        "def": 95,
+        "atk": 131,
+        "hp": 126
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Xerneas-Active",
+      "name": "Xerneas-Active",
+      "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/xerneas.png",
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/xerneas.png"
       },
@@ -27618,6 +27648,36 @@
       "image": {
         "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/wishiwashi.png",
         "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/wishiwashi.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "schooling"
+      },
+      "types": {
+        "type1": "water",
+        "type2": "none"
+      },
+      "id": 746
+    },
+    {
+      "stats": {
+        "spdef": 132,
+        "spd": 30,
+        "spatk": 140,
+        "def": 130,
+        "atk": 140,
+        "hp": 45
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Wishiwashi-School",
+      "name": "Wishiwashi-School",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/wishiwashi-school.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/wishiwashi-school.png"
       },
       "abilities": {
         "hidden_ability": "none",
