@@ -22922,6 +22922,126 @@
     },
     {
       "stats": {
+        "spdef": 95,
+        "spd": 99,
+        "spatk": 120,
+        "def": 95,
+        "atk": 120,
+        "hp": 71
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Genesect-Water",
+      "name": "Genesect-Water",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/genesect-water.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/genesect-water.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "download"
+      },
+      "types": {
+        "type1": "bug",
+        "type2": "steel"
+      },
+      "id": 649
+    },
+    {
+      "stats": {
+        "spdef": 95,
+        "spd": 99,
+        "spatk": 120,
+        "def": 95,
+        "atk": 120,
+        "hp": 71
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Genesect-Electric",
+      "name": "Genesect-Electric",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/genesect-electric.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/genesect-electric.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "download"
+      },
+      "types": {
+        "type1": "bug",
+        "type2": "steel"
+      },
+      "id": 649
+    },
+    {
+      "stats": {
+        "spdef": 95,
+        "spd": 99,
+        "spatk": 120,
+        "def": 95,
+        "atk": 120,
+        "hp": 71
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Genesect-Fire",
+      "name": "Genesect-Fire",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/genesect-fire.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/genesect-fire.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "download"
+      },
+      "types": {
+        "type1": "bug",
+        "type2": "steel"
+      },
+      "id": 649
+    },
+    {
+      "stats": {
+        "spdef": 95,
+        "spd": 99,
+        "spatk": 120,
+        "def": 95,
+        "atk": 120,
+        "hp": 71
+      },
+      "gender": {
+        "male": "false",
+        "female": "false"
+      },
+      "species": "Genesect-Ice",
+      "name": "Genesect-Ice",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/genesect-ice.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/genesect-ice.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "download"
+      },
+      "types": {
+        "type1": "bug",
+        "type2": "steel"
+      },
+      "id": 649
+    },
+    {
+      "stats": {
         "spdef": 45,
         "spd": 38,
         "spatk": 48,
