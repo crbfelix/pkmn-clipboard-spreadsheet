@@ -976,8 +976,8 @@
       "species": "Pikachu-Hoenn",
       "name": "Pikachu-Hoenn",
       "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-hoenn-cap.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-hoenn-cap.png"
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-hoenn-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-hoenn-hat.png"
       },
       "abilities": {
         "hidden_ability": "none",
@@ -1006,8 +1006,8 @@
       "species": "Pikachu-Sinnoh",
       "name": "Pikachu-Sinnoh",
       "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-sinnoh-cap.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-sinnoh-cap.png"
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-sinnoh-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-sinnoh-hat.png"
       },
       "abilities": {
         "hidden_ability": "none",
@@ -1036,8 +1036,8 @@
       "species": "Pikachu-Unova",
       "name": "Pikachu-Unova",
       "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-unova-cap.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-unova-cap.png"
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-unova-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-unova-hat.png"
       },
       "abilities": {
         "hidden_ability": "none",
@@ -1066,8 +1066,8 @@
       "species": "Pikachu-Kalos",
       "name": "Pikachu-Kalos",
       "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-kalos-cap.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-kalos-cap.png"
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-kalos-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-kalos-hat.png"
       },
       "abilities": {
         "hidden_ability": "none",
@@ -1096,8 +1096,8 @@
       "species": "Pikachu-Alola",
       "name": "Pikachu-Alola",
       "image": {
-        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-alola-cap.png",
-        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-alola-cap.png"
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/pikachu-alola-hat.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/pikachu-alola-hat.png"
       },
       "abilities": {
         "hidden_ability": "none",
