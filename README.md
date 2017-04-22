@@ -1,6 +1,8 @@
 # Pokemon's Google Spreadsheet Clipboard Generator
 
-![Heroku](http://heroku-badge.herokuapp.com/?app=pkmnclipboard&style=flat&svg=1)
+![Heroku](http://heroku-badge.herokuapp.com/?app=pkmnclipboard&style=flat&svg=1) 
+[![ghit.me](https://ghit.me/badge.svg?repo=N3evin/pkmn-clipboard-spreadsheet)](https://ghit.me/repo/N3evin/pkmn-clipboard-spreadsheet)
+
 
 A simple website that generate pkhex/pokemon showdown clipboard from google spreadsheet informations.
 
