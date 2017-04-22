@@ -7,7 +7,7 @@ pokemonData = None
 
 
 # Open pokemon database file.
-with open('pokemon.json', 'r', encoding='utf8') as file:
+with open('database/pokemon.json', 'r', encoding='utf8') as file:
     pokemonData = json.load(file)
     file.close()
 
@@ -41,18 +41,12 @@ def generateClipboard(key,sheet,row):
         return errorPage
 
     # information
-    nickname = jsonResult['Nickname']
-    name = jsonResult['Species']
+    nickname = jsonResult['Name']
+    species = jsonResult['Species']
     gender = jsonResult['Gender']
     item = " @ " + jsonResult['Item']
     nature = jsonResult['Nature'] + " Nature"
     shiny = jsonResult['Shiny']
-
-    # Get species name
-    species = ""
-    for data in pokemonData["pokemon"]:
-        if data["name"] == name:
-            species = data["species"]
 
     # Check for item.
     if(jsonResult['Item'] == "None" or jsonResult['Item'] == ""):
@@ -61,12 +55,12 @@ def generateClipboard(key,sheet,row):
     # Get Image of pokemon
     pokemonImage = ""
     for data in pokemonData["pokemon"]:
-        if data["name"] == name:
+        if data["species"] == species:
             pokemonImage = data["image"]["regular"]
             if(shiny.lower() == "yes" or shiny.lower() == "y"):
                 pokemonImage = data["image"]["shiny"]
 
-            name = pokemonImage.rsplit("/")[-1].rsplit(".")[0].capitalize()
+            species = pokemonImage.rsplit("/")[-1].rsplit(".")[0].capitalize()
 
     # Check for gender
     genderImage = "https://www.transparenttextures.com/patterns/asfalt-light.png"
@@ -132,14 +126,119 @@ def generateClipboard(key,sheet,row):
     # Hidden power images
     hiddenPowerImage = ["http://www.serebii.net/pokedex-bw/type/fighting.gif", "http://i.imgur.com/dQbTg50.gif", "http://i.imgur.com/ph8kmn3.gif", "http://i.imgur.com/DVkKfTL.gif", "http://i.imgur.com/PGuzYhv.gif", "http://i.imgur.com/PRd5TLc.gif", "http://i.imgur.com/wslKUmD.gif", "http://i.imgur.com/R14BN7m.gif", "http://i.imgur.com/1Rzd3v5.gif", "http://i.imgur.com/MEh0HBX.gif", "http://i.imgur.com/AaHMBic.gif", "http://i.imgur.com/kgsfJi9.gif", "http://i.imgur.com/hcgblEH.gif", "http://i.imgur.com/StPY3Ym.gif", "http://i.imgur.com/vuIrzDM.gif", "http://i.imgur.com/7jFeWqg.gif", "http://i.imgur.com/4GvaM2N.gif", "http://i.imgur.com/hwZMniI.gif", "http://i.imgur.com/qXQcUfg.png"]
 
-    webPage = "<link rel=\"shortcut icon\" href=\"/favicon.ico\"><title>Clipboard Generator</title><style>header { text-align: center;}footer { font-family: \"Helvetica Neue\", Arial, sans-serif; position: fixed; left: 0; right: 0; padding: 1rem; bottom: 0; background-color: #efefef; text-align: center;}table{border: 1px solid black; margin-left: auto; margin-right: auto;}.tableHeader{font-family: \"Lucida Console\", Monaco, monospace}.btnWrapper { text-align: center;}script { display: none;}.data { border-style: inset; width: 600px; margin: auto;}.popup { position: relative; display: inline-block; cursor: pointer;}.popup .popuptext { visibility: hidden; width: 160px; background-color: #555; color: #fff; text-align: center; border-radius: 6px; padding: 8px 0; position: absolute; z-index: 1; bottom: -225%; left: 50%; margin-left: -80px;}.popup .popuptext::after { content: ""; position: absolute; bottom: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent #555 transparent;}.popup .show { visibility: visible; -webkit-animation: fadeIn 1s; animation: fadeIn 1s}@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}</style><script src=\"https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js\"></script><header> <h1>"+ name.replace("-", " ") +"\'s Clipboard information</h1></header><div class=\"data\"> "+ resultHtml +"</div></br><table width=\"auto\"> <tr> <td width=\"190\" class=\"tableHeader\">"+ name.replace("-", " ") + " <img src=\"" + genderImage +"\" width=\"15px\"></img></td> <td class=\"tableHeader\" width=\"150\" style=\"padding-left:10px; padding-right:20px;\">Level:</td> <td width=\"186\">"+ level +"</td> <td width=\"150\" class=\"tableHeader\">Moves:</td> <td width=\"40\">Hp</td> <td width=\"40\">Atk</td> <td width=\"40\">Def</td> <td width=\"40\">SpA</td> <td width=\"40\">SpD</td> <td width=\"40\">Spe</td> </tr> <tr> <td rowspan=\"4\" align=\"middle\" background=\"http://orig09.deviantart.net/fd1f/f/2014/323/2/0/x_and_y_menu_background_1_by_phoenixoflight92-d86y3jj.png\"><img src =\""+ pokemonImage +"\" width=\"80px\"></img></td> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Ability:</td> <td>"+ ability +"</td> <td>" + str(jsonResult['Move_1']) + "</td> <td>" + iv_hp +"</td> <td>" + iv_atk + "</td> <td>" + iv_def + "</td> <td>" + iv_spA + "</td> <td>" + iv_spD + "</td> <td>" + iv_spE + "</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Nature:</td> <td>"+ nature[:5] +"</td> <td>" + str(jsonResult['Move_2']) + "</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Item Held:</td> <td>"+ item[2:] + "</td> <td>" + str(jsonResult['Move_3']) + "</td> <td>Hp</td> <td>Atk</td> <td>Def</td> <td>SpA</td> <td>SpD</td> <td>Spe</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Hidden Power:</td> <td><img src=\"" + hiddenPowerImage[hiddenPowerType] + "\"></img></td> <td>"+ str(jsonResult['Move_4']) +" <td>" + ev_hp + "</td> <td>" + ev_atk + "</td> <td>" + ev_def + "</td> <td>" + ev_spA + "</td> <td>" + ev_spD + "</td> <td>" + ev_spE + "</td> </tr></table></br><div class=\"btnWrapper\"> <button class=\"popup\" onclick=\"myFunction()\" data-clipboard-text=\"" + result + "\">Copy to clipboard <span class=\"popuptext\" id=\"myPopup\">Copied!</span></button></div><script type = \"text/javascript\" > var clip = new Clipboard('.popup');function myFunction() {var popup = document.getElementById(\"myPopup\");popup.classList.toggle(\"show\");} </script><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/pkmn-clipboard-spreadsheet\">N3evin</a></footer>"
+    webPage = "<link rel=\"shortcut icon\" href=\"/favicon.ico\"><title>Clipboard Generator</title><style>header { text-align: center;}footer { font-family: \"Helvetica Neue\", Arial, sans-serif; position: fixed; left: 0; right: 0; padding: 1rem; bottom: 0; background-color: #efefef; text-align: center;}table{border: 1px solid black; margin-left: auto; margin-right: auto;}.tableHeader{font-family: \"Lucida Console\", Monaco, monospace}.btnWrapper { text-align: center;}script { display: none;}.data { border-style: inset; width: 600px; margin: auto;}.popup { position: relative; display: inline-block; cursor: pointer;}.popup .popuptext { visibility: hidden; width: 160px; background-color: #555; color: #fff; text-align: center; border-radius: 6px; padding: 8px 0; position: absolute; z-index: 1; bottom: -225%; left: 50%; margin-left: -80px;}.popup .popuptext::after { content: ""; position: absolute; bottom: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent #555 transparent;}.popup .show { visibility: visible; -webkit-animation: fadeIn 1s; animation: fadeIn 1s}@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}</style><script src=\"https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js\"></script><header> <h1>"+ species.replace("-", " ") +"\'s Clipboard information</h1></header><div class=\"data\"> "+ resultHtml +"</div></br><table width=\"auto\"> <tr> <td width=\"190\" class=\"tableHeader\">"+ species.replace("-", " ") + " <img src=\"" + genderImage +"\" width=\"15px\"></img></td> <td class=\"tableHeader\" width=\"150\" style=\"padding-left:10px; padding-right:20px;\">Level:</td> <td width=\"186\">"+ level +"</td> <td width=\"150\" class=\"tableHeader\">Moves:</td> <td width=\"40\">Hp</td> <td width=\"40\">Atk</td> <td width=\"40\">Def</td> <td width=\"40\">SpA</td> <td width=\"40\">SpD</td> <td width=\"40\">Spe</td> </tr> <tr> <td rowspan=\"4\" align=\"middle\" background=\"http://orig09.deviantart.net/fd1f/f/2014/323/2/0/x_and_y_menu_background_1_by_phoenixoflight92-d86y3jj.png\"><img src =\""+ pokemonImage +"\" width=\"80px\"></img></td> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Ability:</td> <td>"+ ability +"</td> <td>" + str(jsonResult['Move_1']) + "</td> <td>" + iv_hp +"</td> <td>" + iv_atk + "</td> <td>" + iv_def + "</td> <td>" + iv_spA + "</td> <td>" + iv_spD + "</td> <td>" + iv_spE + "</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Nature:</td> <td>"+ nature[:5] +"</td> <td>" + str(jsonResult['Move_2']) + "</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Item Held:</td> <td>"+ item[2:] + "</td> <td>" + str(jsonResult['Move_3']) + "</td> <td>Hp</td> <td>Atk</td> <td>Def</td> <td>SpA</td> <td>SpD</td> <td>Spe</td> </tr> <tr> <td class=\"tableHeader\" style=\"padding-left:10px; padding-right:20px;\">Hidden Power:</td> <td><img src=\"" + hiddenPowerImage[hiddenPowerType] + "\"></img></td> <td>"+ str(jsonResult['Move_4']) +" <td>" + ev_hp + "</td> <td>" + ev_atk + "</td> <td>" + ev_def + "</td> <td>" + ev_spA + "</td> <td>" + ev_spD + "</td> <td>" + ev_spE + "</td> </tr></table></br><div class=\"btnWrapper\"> <button class=\"popup\" onclick=\"myFunction()\" data-clipboard-text=\"" + result + "\">Copy to clipboard <span class=\"popuptext\" id=\"myPopup\">Copied!</span></button></div><script type = \"text/javascript\" > var clip = new Clipboard('.popup');function myFunction() {var popup = document.getElementById(\"myPopup\");popup.classList.toggle(\"show\");} </script><footer>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href=\"https://github.com/N3evin/pkmn-clipboard-spreadsheet\">N3evin</a></footer>"
 
     return webPage
 
-# Get pokmon by species name
+@app.route('/pokemon/spreadsheet/<string:key>/<string:sheet>/<int:row>', methods=['GET'])
+def generateJsonClipboard(key,sheet,row):
+    website = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=" + key + "&sheet=" + sheet
+    r = requests.get(website)
+
+    errorPage = app.send_static_file('error.html')
+
+    try:
+        jsonResult = r.json()[sheet][row - 1]
+    except Exception:
+        return errorPage
+
+    # information
+    nickname = jsonResult['Name']
+    species = jsonResult['Species']
+    gender = jsonResult['Gender']
+    item = jsonResult['Item']
+    nature = jsonResult['Nature']
+    shiny = jsonResult['Shiny']
+
+    # check gender
+    if("f" in gender.lower()):
+        gender = "f"
+    elif("m" in gender.lower()):
+        gender = "m"
+    else:
+        abort(404)
+
+    # check shiny
+    if ("y" in shiny.lower()):
+        shiny = "Yes"
+    elif("n" in shiny.lower()):
+        shiny = "No"
+    else:
+        abort(404)
+
+    # Moves
+    move1 = str(jsonResult['Move_1'])
+    move2 = str(jsonResult['Move_2'])
+    move3 = str(jsonResult['Move_3'])
+    move4 = str(jsonResult['Move_4'])
+
+    # IV
+    iv_hp = jsonResult['IV_HP']
+    iv_atk = jsonResult['IV_Atk']
+    iv_def = jsonResult['IV_Def']
+    iv_spA = jsonResult['IV_SpA']
+    iv_spD = jsonResult['IV_SpD']
+    iv_spe = jsonResult['IV_Spe']
+
+    # EV
+    ev_hp = jsonResult['EV_HP']
+    ev_atk = jsonResult['EV_Atk']
+    ev_def = jsonResult['EV_Def']
+    ev_spA = jsonResult['EV_SpA']
+    ev_spD = jsonResult['EV_SpD']
+    ev_spe = jsonResult['EV_Spe']
+
+    # Hidden power Type
+    try:
+        hiddenPowerType = (((jsonResult['IV_HP'] % 2) + ((jsonResult['IV_Atk'] % 2) * 2) + (
+        (jsonResult['IV_Def'] % 2) * 4) + ((jsonResult['IV_Spe'] % 2) * 8) + ((jsonResult['IV_SpA'] % 2) * 16) + (
+                            (jsonResult['IV_SpD'] % 2) * 32)) * 15) // 63
+    except Exception:
+        return abort(404)
+
+    # Ability
+    ability = str(jsonResult['Ability'])
+
+    # Level
+    level = str(jsonResult['Level'])
+
+    pokemon = {}
+
+    pokemon.update({"species": species})
+    pokemon.update({"nickname": nickname})
+    pokemon.update({"gender": gender.upper()})
+    pokemon.update({"item": item.title()})
+    pokemon.update({"natural": nature.title()})
+    pokemon.update({"shiny": shiny.title()})
+    pokemon.update({"level": int(level)})
+    pokemon.update({"ability": ability.title()})
+    pokemon.update({"iv": {}})
+    pokemon['iv'].update({"hp": int(iv_hp)})
+    pokemon['iv'].update({"atk": int(iv_atk)})
+    pokemon['iv'].update({"def": int(iv_def)})
+    pokemon['iv'].update({"spA": int(iv_spA)})
+    pokemon['iv'].update({"spD": int(iv_spD)})
+    pokemon['iv'].update({"spe": int(iv_spe)})
+    pokemon.update({"ev": {}})
+    pokemon['ev'].update({"hp": int(ev_hp)})
+    pokemon['ev'].update({"atk": int(ev_atk)})
+    pokemon['ev'].update({"def": int(ev_def)})
+    pokemon['ev'].update({"spA": int(ev_spA)})
+    pokemon['ev'].update({"spD": int(ev_spD)})
+    pokemon['ev'].update({"spe": int(ev_spe)})
+    pokemon.update({"move": {}})
+    pokemon['move'].update({"move1": move1.title()})
+    pokemon['move'].update({"move2": move2.title()})
+    pokemon['move'].update({"move3": move3.title()})
+    pokemon['move'].update({"move4": move4.title()})
+
+
+    return jsonify({'Pokemon': pokemon})
+
+# Get pokmon by species
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
 def pokemon(species):
-    pokemon = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
+    pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'].lower() == species.lower()]
     # Detect Farfetch'd weird name.
     if ("farfetch" in species.lower()):
         pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
@@ -151,7 +250,7 @@ def pokemon(species):
     # For pokemon with spaces in name and check again.
     if len(pokemon) == 0:
         species = species.replace("-", " ")
-        pokemon = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
+        pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'].lower() == species.lower()]
 
     if len(pokemon) == 0:
         abort(404)
