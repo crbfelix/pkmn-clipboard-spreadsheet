@@ -24,9 +24,9 @@ Get the `ID` of your spreadsheet, your `sheet name` and `row number`. Paste it a
 
 Json output: `https://pkmnclipboard.herokuapp.com/spreadsheet/{ID}/{sheet-name}/{row-number}`
 
-Example: [https://pkmnclipboard.herokuapp.com/spreadsheet?id=1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4&name=Sheet1&row=1](https://pkmnclipboard.herokuapp.com/spreadsheet?id=1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4&name=Sheet1&row=1)
+Example: [output](https://pkmnclipboard.herokuapp.com/spreadsheet?id=1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4&name=Sheet1&row=1)
 
-Example Json output: [https://pkmnclipboard.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet1/1](https://pkmnclipboard.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet1/1)
+Example Json output: [json](https://pkmnclipboard.herokuapp.com/spreadsheet/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4/Sheet1/1)
 
 Your done! Now you can pass on the site to someone else! It's even easier if you make a copy of the google spreadsheet template above.
 
