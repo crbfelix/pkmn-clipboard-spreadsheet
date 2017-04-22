@@ -243,7 +243,9 @@ def generateJsonClipboard(key,sheet,row):
     pokemon['move'].update({"move3": move3.title()})
     pokemon['move'].update({"move4": move4.title()})
 
-    return jsonify({'Pokemon': pokemon})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokmon by species
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
@@ -264,7 +266,10 @@ def pokemon(species):
 
     if len(pokemon) == 0:
         abort(404)
-    return jsonify({'Pokemon': pokemon})
+
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokemon by dex number
 @app.route('/api/v1/pokemon/<int:dex>', methods=['GET'])
@@ -272,7 +277,9 @@ def pokemondex(dex):
     pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == dex]
     if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pokemon})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokemon by hidden ability
 @app.route('/api/v1/pokemon/hiddenability/<string:ability>', methods=['GET'])
@@ -280,7 +287,9 @@ def pokemonhiddenability(ability):
     pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if pkmn['abilities']['hidden_ability'] == ability.lower()]
     if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pokemon})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokemon by ability
 @app.route('/api/v1/pokemon/ability/<string:ability>', methods=['GET'])
@@ -288,7 +297,9 @@ def pokemonability(ability):
     pkmn = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if (pkmn['abilities']['ability1'] == ability or pkmn['abilities']['ability2'] == ability.lower()) ]
     if len(pkmn) == 0:
         abort(404)
-    return jsonify({'pokemon': pkmn})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokemon by type
 @app.route('/api/v1/pokemon/type/<string:type>', methods=['GET'])
@@ -296,7 +307,9 @@ def pokemontype(type):
     pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if (pkmn['types']['type1'] == type.lower() or pkmn['types']['type2'] == type.lower()) ]
     if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pokemon})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Get pokemon by gender
 @app.route('/api/v1/pokemon/gender/<string:gender>', methods=['GET'])
@@ -304,7 +317,9 @@ def pokemongender(gender):
     pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if pkmn['gender'][gender.lower()] == "true" ]
     if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pokemon})
+    response = jsonify({'pokemon': pokemon})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 # Make uri data for pokemon
 def make_url_data(pkmn):
