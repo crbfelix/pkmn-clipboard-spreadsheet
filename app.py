@@ -202,8 +202,17 @@ def generateJsonClipboard(key,sheet,row):
     # Level
     level = str(jsonResult['Level'])
 
-    pokemon = {}
+    # Image
+    image = ""
+    for pokemon in pokemonData['pokemon']:
+        if (pokemon["species"] == species):
+            if(shiny.lower() == "yes"):
+                image = pokemon["image"]["shiny"]
+            else:
+                image = pokemon["image"]["regular"]
 
+    pokemon = {}
+    # Append all the stuff into the pokemon json and return it.
     pokemon.update({"species": species})
     pokemon.update({"nickname": nickname})
     pokemon.update({"gender": gender.upper()})
@@ -213,6 +222,7 @@ def generateJsonClipboard(key,sheet,row):
     pokemon.update({"level": int(level)})
     pokemon.update({"ability": ability.title()})
     pokemon.update({"hiddenPower": int(hiddenPowerType)})
+    pokemon.update({"image": image})
     pokemon.update({"iv": {}})
     pokemon['iv'].update({"hp": int(iv_hp)})
     pokemon['iv'].update({"atk": int(iv_atk)})
@@ -232,7 +242,6 @@ def generateJsonClipboard(key,sheet,row):
     pokemon['move'].update({"move2": move2.title()})
     pokemon['move'].update({"move3": move3.title()})
     pokemon['move'].update({"move4": move4.title()})
-
 
     return jsonify({'Pokemon': pokemon})
 
