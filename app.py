@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, jsonify, abort, make_response
+from flask import Flask, send_from_directory, jsonify, abort, make_response, url_for
 import requests, os, json
 
 app = Flask(__name__)
@@ -139,44 +139,44 @@ def generateClipboard(key,sheet,row):
 # Get pokmon by species name
 @app.route('/api/v1/pokemon/<string:species>', methods=['GET'])
 def pokemon(species):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
+    pokemon = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
     # Detect Farfetch'd weird name.
     if ("farfetch" in species.lower()):
-        pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
+        pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['species'] == "Farfetch'd"]
 
     # Detect Flabébé name to normal english
     if (species.lower() == "flabebe"):
         species = species.replace("e", "é")
 
     # For pokemon with spaces in name and check again.
-    if len(pkmn) == 0:
+    if len(pokemon) == 0:
         species = species.replace("-", " ")
-        pkmn = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
+        pokemon = [pkmn for pkmn in pokemonData['pokemon'] if(pkmn['species'].lower() == species.lower() or pkmn['name'].lower() == species.lower())]
 
-    if len(pkmn) == 0:
+    if len(pokemon) == 0:
         abort(404)
-    return jsonify({'Pokemon': pkmn})
+    return jsonify({'Pokemon': pokemon})
 
 # Get pokemon by dex number
 @app.route('/api/v1/pokemon/<int:dex>', methods=['GET'])
 def pokemondex(dex):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == dex]
-    if len(pkmn) == 0:
+    pokemon = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['id'] == dex]
+    if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pkmn})
+    return jsonify({'pokemon': pokemon})
 
 # Get pokemon by hidden ability
 @app.route('/api/v1/pokemon/hiddenability/<string:ability>', methods=['GET'])
 def pokemonhiddenability(ability):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['abilities']['hidden_ability'] == ability.lower()]
-    if len(pkmn) == 0:
+    pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if pkmn['abilities']['hidden_ability'] == ability.lower()]
+    if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pkmn})
+    return jsonify({'pokemon': pokemon})
 
 # Get pokemon by ability
 @app.route('/api/v1/pokemon/ability/<string:ability>', methods=['GET'])
 def pokemonability(ability):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['abilities']['ability1'] == ability or pkmn['abilities']['ability2'] == ability.lower()) ]
+    pkmn = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if (pkmn['abilities']['ability1'] == ability or pkmn['abilities']['ability2'] == ability.lower()) ]
     if len(pkmn) == 0:
         abort(404)
     return jsonify({'pokemon': pkmn})
@@ -184,18 +184,23 @@ def pokemonability(ability):
 # Get pokemon by type
 @app.route('/api/v1/pokemon/type/<string:type>', methods=['GET'])
 def pokemontype(type):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if (pkmn['types']['type1'] == type.lower() or pkmn['types']['type2'] == type.lower()) ]
-    if len(pkmn) == 0:
+    pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if (pkmn['types']['type1'] == type.lower() or pkmn['types']['type2'] == type.lower()) ]
+    if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pkmn})
+    return jsonify({'pokemon': pokemon})
 
 # Get pokemon by gender
 @app.route('/api/v1/pokemon/gender/<string:gender>', methods=['GET'])
 def pokemongender(gender):
-    pkmn = [pkmn for pkmn in pokemonData['pokemon'] if pkmn['gender'][gender.lower()] == "yes" ]
-    if len(pkmn) == 0:
+    pokemon = [make_url_data(pkmn) for pkmn in pokemonData['pokemon'] if pkmn['gender'][gender.lower()] == "true" ]
+    if len(pokemon) == 0:
         abort(404)
-    return jsonify({'pokemon': pkmn})
+    return jsonify({'pokemon': pokemon})
+
+# Make uri data for pokemon
+def make_url_data(pkmn):
+    pkmn.update({'url':(url_for('pokemondex', dex=pkmn['id'], _external=True))})
+    return pkmn
 
 if __name__ == "__main__":
     app.run(debug=True)

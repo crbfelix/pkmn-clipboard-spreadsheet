@@ -24510,6 +24510,306 @@
       },
       "id": 676
     },
+    	{
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Heart",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-heart.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-heart.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Star",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-star.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-star.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Diamond",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-diamond.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-diamond.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Debutante",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-debutante.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-debutante.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Matron",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-matron.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-matron.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Dandy",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-dandy.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-dandy.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-La Reine",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-la-reine.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-la-reine.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Kabuki",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-kabuki.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-kabuki.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
+    {
+      "stats": {
+        "spdef": 90,
+        "spd": 102,
+        "spatk": 65,
+        "def": 60,
+        "atk": 80,
+        "hp": 75
+      },
+      "gender": {
+        "male": "true",
+        "female": "true"
+      },
+      "species": "Furfrou",
+      "name": "Furfrou-Pharaoh",
+      "image": {
+        "shiny": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/shiny/furfrou-pharaoh.png",
+        "regular": "https://raw.githubusercontent.com/msikma/pokesprite/master/icons/pokemon/regular/furfrou-pharaoh.png"
+      },
+      "abilities": {
+        "hidden_ability": "none",
+        "ability2": "none",
+        "ability1": "fur coat"
+      },
+      "types": {
+        "type1": "normal",
+        "type2": "none"
+      },
+      "id": 676
+    },
     {
       "stats": {
         "spdef": 60,
