@@ -217,7 +217,7 @@ def generateJsonClipboard(key,sheet,row):
     pokemon.update({"nickname": nickname})
     pokemon.update({"gender": gender.upper()})
     pokemon.update({"item": item.title()})
-    pokemon.update({"natural": nature.title()})
+    pokemon.update({"nature": nature.title()})
     pokemon.update({"shiny": shiny.title()})
     pokemon.update({"level": int(level)})
     pokemon.update({"ability": ability.title()})
