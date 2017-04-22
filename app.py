@@ -212,6 +212,7 @@ def generateJsonClipboard(key,sheet,row):
     pokemon.update({"shiny": shiny.title()})
     pokemon.update({"level": int(level)})
     pokemon.update({"ability": ability.title()})
+    pokemon.update({"hiddenPower": int(hiddenPowerType)})
     pokemon.update({"iv": {}})
     pokemon['iv'].update({"hp": int(iv_hp)})
     pokemon['iv'].update({"atk": int(iv_atk)})
