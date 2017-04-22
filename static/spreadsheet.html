@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		
+		
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<title>Clipboard Generator</title>
+		
+		<style>header { text-align: center;}footer { font-family: "Helvetica Neue", Arial, sans-serif; position: fixed; left: 0; right: 0; padding: 1rem; bottom: 0; background-color: #efefef; text-align: center;}table{border: 1px solid black; margin-left: auto; margin-right: auto;}.tableHeader{font-family: "Lucida Console", Monaco, monospace}.btnWrapper { text-align: center;}script { display: none;}.data { border-style: inset; width: 600px; margin: auto;}.popup { position: relative; display: inline-block; cursor: pointer;}.popup .popuptext { visibility: hidden; width: 160px; background-color: #555; color: #fff; text-align: center; border-radius: 6px; padding: 8px 0; position: absolute; z-index: 1; bottom: -225%; left: 50%; margin-left: -80px;}.popup .popuptext::after { content: ; position: absolute; bottom: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent #555 transparent;}.popup .show { visibility: visible; -webkit-animation: fadeIn 1s; animation: fadeIn 1s}@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}</style>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js"></script>
+
+	</head>
+	<body>
+
+		<header>
+			<h1><span class="species"></span>'s Clipboard information</h1>
+		</header>
+		<div class="data"> 
+			<span class="nickname"></span> (<span class="species"></span>) (<span class="gender"></span>) @ <span class="item"></span>
+			</br>Shiny: <span class="shiny" ></span>
+			</br><span class="nature" ></span> Nature
+			</br>IVs: <span class="iv-hp"></span> HP / <span class="iv-atk"></span> Atk / <span class="iv-def"></span> Def / <span class="iv-spA"></span> SpA / <span class="iv-spD"></span> SpD / <span class="iv-spe"></span> Spe
+			</br>EVs: <span class="ev-hp"></span> HP / <span class="ev-atk"></span> Atk / <span class="ev-def"></span> Def / <span class="ev-spA"></span> SpA / <span class="ev-spD"></span> SpD / <span class="ev-spe"></span> Spe
+			</br>Ability: <span class="ability"></span>
+			</br>Level: <span class="level"></span>
+		</div>
+		</br>
+		
+		<table width="auto">
+			<tr>
+				<td class="tableHeader"><span class="nickname"></span></td>	
+			</tr>
+			<tr>
+				<td width="190" rowspan="5" align="middle" background="http://orig09.deviantart.net/fd1f/f/2014/323/2/0/x_and_y_menu_background_1_by_phoenixoflight92-d86y3jj.png"><img class="poke-img" src ="" width="80px"></img></td>
+				<td class="tableHeader" width="150" style="padding-left:10px; padding-right:20px;">Level:</td>
+				<td width="186" class="level" ></td>
+				<td width="150" class="tableHeader">Moves:</td>
+				<td width="40">Hp</td>
+				<td width="40">Atk</td>
+				<td width="40">Def</td>
+				<td width="40">SpA</td>
+				<td width="40">SpD</td>
+				<td width="40">Spe</td>
+			</tr>
+			<tr>
+				<td class="tableHeader" style="padding-left:10px; padding-right:20px;">Ability:</td>
+				<td class="ability"></td>
+				<td class="move1"></td>
+				<td class="iv-hp"></td>
+				<td class="iv-atk"></td>
+				<td class="iv-def"></td>
+				<td class="iv-spA"></td>
+				<td class="iv-spD"></td>
+				<td class="iv-spe"></td>
+			</tr>
+			<tr>
+				<td class="tableHeader" style="padding-left:10px; padding-right:20px;">Nature:</td>
+				<td class="nature"></td>
+				<td class="move2"></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tableHeader" style="padding-left:10px; padding-right:20px;">Item Held:</td>
+				<td class="item"></td>
+				<td class="move3"></td>
+				<td>Hp</td>
+				<td>Atk</td>
+				<td>Def</td>
+				<td>SpA</td>
+				<td>SpD</td>
+				<td>Spe</td>
+			</tr>
+			<tr>
+				<td class="tableHeader" style="padding-left:10px; padding-right:20px;">Hidden Power:</td>
+				<td><img class="hidden-pwr-img" src=""></img></td>
+				<td class="move4"></td>
+				<td class="ev-hp"></td>
+				<td class="ev-atk"></td>
+				<td class="ev-def"></td>
+				<td class="ev-spA"></td>
+				<td class="ev-spD"></td>
+				<td class="ev-spe"></td>
+			</tr>
+		</table>
+		</br>
+		
+		<!-- remove data-clipboard-text add from jquery-->
+		<div class="btnWrapper"> 
+			<button class="popup clipboard-button" onclick="myFunction()" data-clipboard-text="">Copy to clipboard <span class="popuptext" id="myPopup">Copied!</span>
+			</button>
+		</div>
+	</body>
+	
+	<footer>
+		Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href="https://github.com/N3evin/pkmn-clipboard-spreadsheet">N3evin</a>.  Designed by <a href="#">Randolph</a>. Database by <a href="https://github.com/crbfelix">crbfelix</a>.
+	</footer>
+	
+	<script type = "text/javascript" > var clip = new Clipboard('.popup');function myFunction() {var popup = document.getElementById("myPopup");popup.classList.toggle("show");} </script>
+
+	<script type="text/javascript">
+		<!-- Retrieve information from paramters -->
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+		
+		var id = getParameterByName('id');
+		var name = getParameterByName('name');
+		var row = getParameterByName('row');
+		
+		<!-- Images for hidden power -->
+		var hiddenPowerImage = ["http://www.serebii.net/pokedex-bw/type/fighting.gif", 
+								"http://i.imgur.com/dQbTg50.gif", 
+								"http://i.imgur.com/ph8kmn3.gif", 
+								"http://i.imgur.com/DVkKfTL.gif", 
+								"http://i.imgur.com/PGuzYhv.gif", 
+								"http://i.imgur.com/PRd5TLc.gif", 
+								"http://i.imgur.com/wslKUmD.gif", 
+								"http://i.imgur.com/R14BN7m.gif", 
+								"http://i.imgur.com/1Rzd3v5.gif", 
+								"http://i.imgur.com/MEh0HBX.gif", 
+								"http://i.imgur.com/AaHMBic.gif", 
+								"http://i.imgur.com/kgsfJi9.gif", 
+								"http://i.imgur.com/hcgblEH.gif", 
+								"http://i.imgur.com/StPY3Ym.gif", 
+								"http://i.imgur.com/vuIrzDM.gif", 
+								"http://i.imgur.com/7jFeWqg.gif", 
+								"http://i.imgur.com/4GvaM2N.gif", 
+								"http://i.imgur.com/hwZMniI.gif", 
+								"http://i.imgur.com/qXQcUfg.png"]
+		
+		<!-- request json from website -->
+		var json = (function(){
+			var json = null;
+			$.ajax({
+					'async':false,
+					'global': false,
+					'url':  location.protocol + '/spreadsheet/' + id +'/'+ name +'/' + row,
+					'dataType': "json",
+					'success': function (data) {
+						json = data;
+					}
+				});
+			return json;
+		})();
+		
+		$(document).ready(function(){
+			
+			<!-- nickname -->
+			var class_length = document.getElementsByClassName("nickname").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("nickname")[i].innerHTML = json.pokemon.nickname;
+			}
+			
+			<!-- species -->
+			var class_length = document.getElementsByClassName("species").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("species")[i].innerHTML = json.pokemon.species;
+			}
+			
+			<!-- gender -->
+			var class_length = document.getElementsByClassName("gender").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("gender")[i].innerHTML = json.pokemon.gender;
+			}
+			
+			<!-- item -->
+			var class_length = document.getElementsByClassName("item").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("item")[i].innerHTML = json.pokemon.item;
+			}
+			
+			<!-- shiny -->
+			var class_length = document.getElementsByClassName("shiny").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("shiny")[i].innerHTML = json.pokemon.shiny;
+			}
+			
+			<!-- nature -->
+			var class_length = document.getElementsByClassName("nature").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("nature")[i].innerHTML = json.pokemon.nature;
+			}
+			
+			<!-- IV -->
+			var class_length = document.getElementsByClassName("iv-hp").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-hp")[i].innerHTML = json.pokemon.iv.hp;
+			}
+			var class_length = document.getElementsByClassName("iv-atk").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-atk")[i].innerHTML = json.pokemon.iv.atk;
+			}
+			var class_length = document.getElementsByClassName("iv-def").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-def")[i].innerHTML = json.pokemon.iv.def;
+			}
+			var class_length = document.getElementsByClassName("iv-spA").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-spA")[i].innerHTML = json.pokemon.iv.spA;
+			}
+			var class_length = document.getElementsByClassName("iv-spD").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-spD")[i].innerHTML = json.pokemon.iv.spD;
+			}
+			var class_length = document.getElementsByClassName("iv-spe").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("iv-spe")[i].innerHTML = json.pokemon.iv.spe;
+			}
+			
+			<!-- EV -->
+			var class_length = document.getElementsByClassName("ev-hp").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-hp")[i].innerHTML = json.pokemon.ev.hp;
+			}
+			var class_length = document.getElementsByClassName("ev-atk").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-atk")[i].innerHTML = json.pokemon.ev.atk;
+			}
+			var class_length = document.getElementsByClassName("ev-def").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-def")[i].innerHTML = json.pokemon.ev.def;
+			}
+			var class_length = document.getElementsByClassName("ev-spA").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-spA")[i].innerHTML = json.pokemon.ev.spA;
+			}
+			var class_length = document.getElementsByClassName("ev-spD").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-spD")[i].innerHTML = json.pokemon.ev.spD;
+			}
+			var class_length = document.getElementsByClassName("ev-spe").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ev-spe")[i].innerHTML = json.pokemon.ev.spe;
+			}
+			
+			<!-- ability -->
+			var class_length = document.getElementsByClassName("ability").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("ability")[i].innerHTML = json.pokemon.ability;
+			}
+			
+			<!-- level -->
+			var class_length = document.getElementsByClassName("level").length;
+			for(i = 0 ; i < class_length; i++){
+				document.getElementsByClassName("level")[i].innerHTML = json.pokemon.level;
+			}
+			
+			<!-- image -->
+			$('.poke-img').attr("src", json.pokemon.image);
+			
+			<!-- moves -->
+			var moves_length = Object.keys(json.pokemon.move).length;
+			var moves_html = "";
+			for (var key in json.pokemon.move) {
+				if( json.pokemon.move[key] != ""){
+					moves_html += "</br>- " + json.pokemon.move[key];
+				}
+			}
+			var class_length = document.getElementsByClassName("data").length;
+			$(".data").append(moves_html);
+			switch(moves_length){
+				case 1:
+					var class_length = document.getElementsByClassName("move1").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+					}
+					break;
+				case 2:
+					var class_length = document.getElementsByClassName("move1").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+					}
+					var class_length = document.getElementsByClassName("move2").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+					}
+					break;
+				case 3:
+					var class_length = document.getElementsByClassName("move1").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+					}
+					var class_length = document.getElementsByClassName("move2").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+					}
+					var class_length = document.getElementsByClassName("move3").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
+					}
+					break;
+				case 4:
+					var class_length = document.getElementsByClassName("move1").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+					}
+					var class_length = document.getElementsByClassName("move2").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+					}
+					var class_length = document.getElementsByClassName("move3").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
+					}
+					var class_length = document.getElementsByClassName("move4").length;
+					for(i = 0 ; i < class_length; i++){
+						document.getElementsByClassName("move4")[i].innerHTML = json.pokemon.move.move4;
+					}
+					break;
+				default:
+					break;
+			}
+			
+			
+			<!-- hidden power -->
+			var hidden_pwr_val = json.pokemon.hiddenPower;
+			$('.hidden-pwr-img').attr("src", hiddenPowerImage[hidden_pwr_val]);
+			
+			<!-- clipboard text -->
+			var moves_clipboard = "";
+			for (var key in json.pokemon.move) {
+				if( json.pokemon.move[key] != ""){
+					moves_clipboard += "\n- " + json.pokemon.move[key];
+				}
+			}
+			var clipboard_text = json.pokemon.nickname + " (" + json.pokemon.species + ") (" + json.pokemon.gender + ") @ " + json.pokemon.item +
+				"\nShiny: " + json.pokemon.shiny +
+				"\n" + json.pokemon.nature + " Nature " +
+				"\nIVs: " + json.pokemon.iv.hp + " HP / " + json.pokemon.iv.atk + " Atk / " + json.pokemon.iv.def + " Def / " + json.pokemon.iv.spA + " SpA / " + json.pokemon.iv.spD + " SpD / " + json.pokemon.iv.spe + " Spe " +
+				"\nEVs: " + json.pokemon.ev.hp + " HP / " + json.pokemon.ev.atk + " Atk / " + json.pokemon.ev.def + " Def / " + json.pokemon.ev.spA + " SpA / " + json.pokemon.ev.spD + " SpD / " + json.pokemon.ev.spe + " Spe " +
+				"\nAbility: " + json.pokemon.ability +
+				"\nLevel: " + json.pokemon.level +
+				moves_clipboard;
+				
+			$('.clipboard-button').attr("data-clipboard-text", clipboard_text);
+		});
+		
+	</script>
+</html>

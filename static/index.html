@@ -24,14 +24,27 @@
       <fieldset>
          <legend>Generate Pokemon Showdown clipboard format data</legend>
          <p>
+         <h2>/spreadsheet?id=spreadsheed-id&name=sheetname&row=row-number</h2>
+         </p>
+         <ul>
+            <li><b>spreadsheet id:</b> id from spreadsheet url.</li>
+            <li><b>sheetname:</b> sheet name from spreadsheet to read from.</li>
+            <li><b>row-number:</b> which row of spreadsheet to retrieve information from.</li>
+			<li><b>Google Spreadsheet:</b> <a href="https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4">template</a></li>
+         </ul>
+      </fieldset>
+   </div>
+   <div>
+      <fieldset>
+         <legend>Get information in json from spreadsheet</legend>
+         <p>
          <h2>/spreadsheet/{spreadsheet id}/{sheet name}/{row}</h2>
          </p>
          <ul>
             <li><b>spreadsheet id:</b> id from spreadsheet url.</li>
             <li><b>sheetname:</b> sheet name from spreadsheet to read from.</li>
             <li><b>row:</b> which row of spreadsheet to retrieve information from.</li>
-            <li><b>return:</b> A website with pokemon information.</li>
-			<li><b>Google Spreadsheet:</b> <a href="https://docs.google.com/spreadsheets/d/1UhGUFz6vRir5NFJ8kf0-siQF7JFvStX5ZvMYCHihlA4">template</a></li>
+            <li><b>return:</b> Json info of spreadsheet.</li>
          </ul>
       </fieldset>
    </div>
@@ -109,5 +122,5 @@
    </div>
 </body>
 <footer>
-   Copyright &copy; <script> new Date().getFullYear() > 2010 && document.write(new Date().getFullYear()); </script>, <a href="https://github.com/N3evin/pkmn-clipboard-spreadsheet">N3evin</a>
+	Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, <a href="https://github.com/N3evin/pkmn-clipboard-spreadsheet">N3evin</a>.  Designed by <a href="#">Randolph</a>. Database by <a href="https://github.com/crbfelix">crbfelix</a>.
 </footer>
