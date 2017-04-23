@@ -57,6 +57,8 @@ def generateJsonClipboard(key,sheet,row):
         gender = "f"
     elif("m" in gender.lower()):
         gender = "m"
+    elif ("n" in gender.lower()):
+        gender = "n"
     else:
         abort(404)
 

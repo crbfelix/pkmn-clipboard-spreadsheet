@@ -19,7 +19,7 @@
 			<h1><span class="species"></span>'s Clipboard information</h1>
 		</header>
 		<div class="data"> 
-			<span class="nickname"></span> (<span class="species"></span>) (<span class="gender"></span>) @ <span class="item"></span>
+			<span class="nickname"></span> (<span class="species"></span>) <span class="gender"></span> @ <span class="item"></span>
 			</br>Shiny: <span class="shiny" ></span>
 			</br><span class="nature" ></span> Nature
 			</br>IVs: <span class="iv-hp"></span> HP / <span class="iv-atk"></span> Atk / <span class="iv-def"></span> Def / <span class="iv-spA"></span> SpA / <span class="iv-spD"></span> SpD / <span class="iv-spe"></span> Spe
@@ -31,7 +31,7 @@
 		
 		<table width="auto">
 			<tr>
-				<td class="tableHeader"><span class="nickname"></span> (<span class="gender"></span>)</td>	
+				<td class="tableHeader"><span class="nickname"></span> <span class="gender"></span></td>
 			</tr>
 			<tr>
 				<td width="190" rowspan="5" align="middle" background="https://orig09.deviantart.net/fd1f/f/2014/323/2/0/x_and_y_menu_background_1_by_phoenixoflight92-d86y3jj.png"><img class="poke-img" src ="" width="80px"></img></td>
@@ -173,7 +173,9 @@
 			<!-- gender -->
 			var class_length = document.getElementsByClassName("gender").length;
 			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("gender")[i].innerHTML = json.pokemon.gender;
+			    if(json.pokemon.gender != "N") {
+                    document.getElementsByClassName("gender")[i].innerHTML = "(" + json.pokemon.gender + ")";
+                }
 			}
 			
 			<!-- item -->
@@ -336,7 +338,17 @@
 					moves_clipboard += "\n- " + json.pokemon.move[key];
 				}
 			}
-			var clipboard_text = json.pokemon.nickname + " (" + json.pokemon.species + ") (" + json.pokemon.gender + ") @ " + json.pokemon.item +
+
+			<!-- gender checker for clipboard -->
+			var clipGender = json.pokemon.gender;
+			if(clipGender != "N"){
+			    clipGender = " (" + clipGender + ")"
+            } else{
+			    clipGender = ""
+            }
+
+
+			var clipboard_text = json.pokemon.nickname + " (" + json.pokemon.species + ")" + clipGender + " @ " + json.pokemon.item +
 				"\nShiny: " + json.pokemon.shiny +
 				"\n" + json.pokemon.nature + " Nature " +
 				"\nIVs: " + json.pokemon.iv.hp + " HP / " + json.pokemon.iv.atk + " Atk / " + json.pokemon.iv.def + " Def / " + json.pokemon.iv.spA + " SpA / " + json.pokemon.iv.spD + " SpD / " + json.pokemon.iv.spe + " Spe " +
