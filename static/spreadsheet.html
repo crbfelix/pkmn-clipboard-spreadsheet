@@ -161,208 +161,209 @@
 		    <!-- No pokemon found redirect to error page. -->
 		    if(json == null){
 		        window.location.href = "/error";
-            }
+            } else {
 
-			<!-- nickname -->
-			var class_length = document.getElementsByClassName("nickname").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("nickname")[i].innerHTML = json.pokemon.nickname;
-			}
-
-			<!-- species -->
-			var class_length = document.getElementsByClassName("species").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("species")[i].innerHTML = json.pokemon.species;
-			}
-
-			<!-- gender -->
-			var class_length = document.getElementsByClassName("gender").length;
-			for(i = 0 ; i < class_length; i++){
-			    if(json.pokemon.gender != "N") {
-                    document.getElementsByClassName("gender")[i].innerHTML = "(" + json.pokemon.gender + ")";
-                }
-			}
-
-			<!-- item -->
-			var class_length = document.getElementsByClassName("item").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("item")[i].innerHTML = json.pokemon.item;
-			}
-
-			<!-- shiny -->
-			var class_length = document.getElementsByClassName("shiny").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("shiny")[i].innerHTML = json.pokemon.shiny;
-			}
-
-			<!-- nature -->
-			var class_length = document.getElementsByClassName("nature").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("nature")[i].innerHTML = json.pokemon.nature;
-			}
-
-			<!-- IV -->
-			var class_length = document.getElementsByClassName("iv-hp").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-hp")[i].innerHTML = json.pokemon.iv.hp;
-			}
-			var class_length = document.getElementsByClassName("iv-atk").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-atk")[i].innerHTML = json.pokemon.iv.atk;
-			}
-			var class_length = document.getElementsByClassName("iv-def").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-def")[i].innerHTML = json.pokemon.iv.def;
-			}
-			var class_length = document.getElementsByClassName("iv-spA").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-spA")[i].innerHTML = json.pokemon.iv.spA;
-			}
-			var class_length = document.getElementsByClassName("iv-spD").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-spD")[i].innerHTML = json.pokemon.iv.spD;
-			}
-			var class_length = document.getElementsByClassName("iv-spe").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("iv-spe")[i].innerHTML = json.pokemon.iv.spe;
-			}
-
-			<!-- EV -->
-			var class_length = document.getElementsByClassName("ev-hp").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-hp")[i].innerHTML = json.pokemon.ev.hp;
-			}
-			var class_length = document.getElementsByClassName("ev-atk").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-atk")[i].innerHTML = json.pokemon.ev.atk;
-			}
-			var class_length = document.getElementsByClassName("ev-def").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-def")[i].innerHTML = json.pokemon.ev.def;
-			}
-			var class_length = document.getElementsByClassName("ev-spA").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-spA")[i].innerHTML = json.pokemon.ev.spA;
-			}
-			var class_length = document.getElementsByClassName("ev-spD").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-spD")[i].innerHTML = json.pokemon.ev.spD;
-			}
-			var class_length = document.getElementsByClassName("ev-spe").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ev-spe")[i].innerHTML = json.pokemon.ev.spe;
-			}
-
-			<!-- ability -->
-			var class_length = document.getElementsByClassName("ability").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("ability")[i].innerHTML = json.pokemon.ability;
-			}
-
-			<!-- level -->
-			var class_length = document.getElementsByClassName("level").length;
-			for(i = 0 ; i < class_length; i++){
-				document.getElementsByClassName("level")[i].innerHTML = json.pokemon.level;
-			}
-
-			<!-- image -->
-			$('.poke-img').attr("src", json.pokemon.image);
-
-			<!-- moves -->
-			var moves_length = Object.keys(json.pokemon.move).length;
-			var moves_html = "";
-			for (var key in json.pokemon.move) {
-				if( json.pokemon.move[key] != ""){
-					moves_html += "</br>- " + json.pokemon.move[key];
+				<!-- nickname -->
+				var class_length = document.getElementsByClassName("nickname").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("nickname")[i].innerHTML = json.pokemon.nickname;
 				}
-			}
-			var class_length = document.getElementsByClassName("data").length;
-			$(".data").append(moves_html);
-			switch(moves_length){
-				case 1:
-					var class_length = document.getElementsByClassName("move1").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
-					}
-					break;
-				case 2:
-					var class_length = document.getElementsByClassName("move1").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
-					}
-					var class_length = document.getElementsByClassName("move2").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
-					}
-					break;
-				case 3:
-					var class_length = document.getElementsByClassName("move1").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
-					}
-					var class_length = document.getElementsByClassName("move2").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
-					}
-					var class_length = document.getElementsByClassName("move3").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
-					}
-					break;
-				case 4:
-					var class_length = document.getElementsByClassName("move1").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
-					}
-					var class_length = document.getElementsByClassName("move2").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
-					}
-					var class_length = document.getElementsByClassName("move3").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
-					}
-					var class_length = document.getElementsByClassName("move4").length;
-					for(i = 0 ; i < class_length; i++){
-						document.getElementsByClassName("move4")[i].innerHTML = json.pokemon.move.move4;
-					}
-					break;
-				default:
-					break;
-			}
 
-
-			<!-- hidden power -->
-			var hidden_pwr_val = json.pokemon.hiddenPower;
-			$('.hidden-pwr-img').attr("src", hiddenPowerImage[hidden_pwr_val]);
-
-			<!-- clipboard text -->
-			var moves_clipboard = "";
-			for (var key in json.pokemon.move) {
-				if( json.pokemon.move[key] != ""){
-					moves_clipboard += "\n- " + json.pokemon.move[key];
+				<!-- species -->
+				var class_length = document.getElementsByClassName("species").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("species")[i].innerHTML = json.pokemon.species;
 				}
+
+				<!-- gender -->
+				var class_length = document.getElementsByClassName("gender").length;
+				for(i = 0 ; i < class_length; i++){
+					if(json.pokemon.gender != "N") {
+						document.getElementsByClassName("gender")[i].innerHTML = "(" + json.pokemon.gender + ")";
+					}
+				}
+
+				<!-- item -->
+				var class_length = document.getElementsByClassName("item").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("item")[i].innerHTML = json.pokemon.item;
+				}
+
+				<!-- shiny -->
+				var class_length = document.getElementsByClassName("shiny").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("shiny")[i].innerHTML = json.pokemon.shiny;
+				}
+
+				<!-- nature -->
+				var class_length = document.getElementsByClassName("nature").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("nature")[i].innerHTML = json.pokemon.nature;
+				}
+
+				<!-- IV -->
+				var class_length = document.getElementsByClassName("iv-hp").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-hp")[i].innerHTML = json.pokemon.iv.hp;
+				}
+				var class_length = document.getElementsByClassName("iv-atk").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-atk")[i].innerHTML = json.pokemon.iv.atk;
+				}
+				var class_length = document.getElementsByClassName("iv-def").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-def")[i].innerHTML = json.pokemon.iv.def;
+				}
+				var class_length = document.getElementsByClassName("iv-spA").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-spA")[i].innerHTML = json.pokemon.iv.spA;
+				}
+				var class_length = document.getElementsByClassName("iv-spD").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-spD")[i].innerHTML = json.pokemon.iv.spD;
+				}
+				var class_length = document.getElementsByClassName("iv-spe").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("iv-spe")[i].innerHTML = json.pokemon.iv.spe;
+				}
+
+				<!-- EV -->
+				var class_length = document.getElementsByClassName("ev-hp").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-hp")[i].innerHTML = json.pokemon.ev.hp;
+				}
+				var class_length = document.getElementsByClassName("ev-atk").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-atk")[i].innerHTML = json.pokemon.ev.atk;
+				}
+				var class_length = document.getElementsByClassName("ev-def").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-def")[i].innerHTML = json.pokemon.ev.def;
+				}
+				var class_length = document.getElementsByClassName("ev-spA").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-spA")[i].innerHTML = json.pokemon.ev.spA;
+				}
+				var class_length = document.getElementsByClassName("ev-spD").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-spD")[i].innerHTML = json.pokemon.ev.spD;
+				}
+				var class_length = document.getElementsByClassName("ev-spe").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ev-spe")[i].innerHTML = json.pokemon.ev.spe;
+				}
+
+				<!-- ability -->
+				var class_length = document.getElementsByClassName("ability").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("ability")[i].innerHTML = json.pokemon.ability;
+				}
+
+				<!-- level -->
+				var class_length = document.getElementsByClassName("level").length;
+				for(i = 0 ; i < class_length; i++){
+					document.getElementsByClassName("level")[i].innerHTML = json.pokemon.level;
+				}
+
+				<!-- image -->
+				$('.poke-img').attr("src", json.pokemon.image);
+
+				<!-- moves -->
+				var moves_length = Object.keys(json.pokemon.move).length;
+				var moves_html = "";
+				for (var key in json.pokemon.move) {
+					if( json.pokemon.move[key] != ""){
+						moves_html += "</br>- " + json.pokemon.move[key];
+					}
+				}
+				var class_length = document.getElementsByClassName("data").length;
+				$(".data").append(moves_html);
+				switch(moves_length){
+					case 1:
+						var class_length = document.getElementsByClassName("move1").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+						}
+						break;
+					case 2:
+						var class_length = document.getElementsByClassName("move1").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+						}
+						var class_length = document.getElementsByClassName("move2").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+						}
+						break;
+					case 3:
+						var class_length = document.getElementsByClassName("move1").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+						}
+						var class_length = document.getElementsByClassName("move2").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+						}
+						var class_length = document.getElementsByClassName("move3").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
+						}
+						break;
+					case 4:
+						var class_length = document.getElementsByClassName("move1").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move1")[i].innerHTML = json.pokemon.move.move1;
+						}
+						var class_length = document.getElementsByClassName("move2").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move2")[i].innerHTML = json.pokemon.move.move2;
+						}
+						var class_length = document.getElementsByClassName("move3").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move3")[i].innerHTML = json.pokemon.move.move3;
+						}
+						var class_length = document.getElementsByClassName("move4").length;
+						for(i = 0 ; i < class_length; i++){
+							document.getElementsByClassName("move4")[i].innerHTML = json.pokemon.move.move4;
+						}
+						break;
+					default:
+						break;
+				}
+
+
+				<!-- hidden power -->
+				var hidden_pwr_val = json.pokemon.hiddenPower;
+				$('.hidden-pwr-img').attr("src", hiddenPowerImage[hidden_pwr_val]);
+
+				<!-- clipboard text -->
+				var moves_clipboard = "";
+				for (var key in json.pokemon.move) {
+					if( json.pokemon.move[key] != ""){
+						moves_clipboard += "\n- " + json.pokemon.move[key];
+					}
+				}
+
+				<!-- gender checker for clipboard -->
+				var clipGender = json.pokemon.gender;
+				if(clipGender != "N"){
+					clipGender = " (" + clipGender + ")"
+				} else{
+					clipGender = ""
+				}
+
+
+				var clipboard_text = json.pokemon.nickname + " (" + json.pokemon.species + ")" + clipGender + " @ " + json.pokemon.item +
+					"\nShiny: " + json.pokemon.shiny +
+					"\n" + json.pokemon.nature + " Nature " +
+					"\nIVs: " + json.pokemon.iv.hp + " HP / " + json.pokemon.iv.atk + " Atk / " + json.pokemon.iv.def + " Def / " + json.pokemon.iv.spA + " SpA / " + json.pokemon.iv.spD + " SpD / " + json.pokemon.iv.spe + " Spe " +
+					"\nEVs: " + json.pokemon.ev.hp + " HP / " + json.pokemon.ev.atk + " Atk / " + json.pokemon.ev.def + " Def / " + json.pokemon.ev.spA + " SpA / " + json.pokemon.ev.spD + " SpD / " + json.pokemon.ev.spe + " Spe " +
+					"\nAbility: " + json.pokemon.ability +
+					"\nLevel: " + json.pokemon.level +
+					moves_clipboard;
+
+				$('.clipboard-button').attr("data-clipboard-text", clipboard_text);
 			}
-
-			<!-- gender checker for clipboard -->
-			var clipGender = json.pokemon.gender;
-			if(clipGender != "N"){
-			    clipGender = " (" + clipGender + ")"
-            } else{
-			    clipGender = ""
-            }
-
-
-			var clipboard_text = json.pokemon.nickname + " (" + json.pokemon.species + ")" + clipGender + " @ " + json.pokemon.item +
-				"\nShiny: " + json.pokemon.shiny +
-				"\n" + json.pokemon.nature + " Nature " +
-				"\nIVs: " + json.pokemon.iv.hp + " HP / " + json.pokemon.iv.atk + " Atk / " + json.pokemon.iv.def + " Def / " + json.pokemon.iv.spA + " SpA / " + json.pokemon.iv.spD + " SpD / " + json.pokemon.iv.spe + " Spe " +
-				"\nEVs: " + json.pokemon.ev.hp + " HP / " + json.pokemon.ev.atk + " Atk / " + json.pokemon.ev.def + " Def / " + json.pokemon.ev.spA + " SpA / " + json.pokemon.ev.spD + " SpD / " + json.pokemon.ev.spe + " Spe " +
-				"\nAbility: " + json.pokemon.ability +
-				"\nLevel: " + json.pokemon.level +
-				moves_clipboard;
-
-			$('.clipboard-button').attr("data-clipboard-text", clipboard_text);
 		});
 		
 	</script>
