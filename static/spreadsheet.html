@@ -145,7 +145,7 @@
 		var json = (function(){
 			var json = null;
 			$.ajax({
-					'async':true,
+					'async':false,
 					'global': false,
 					'url':  location.protocol + '/spreadsheet/' + id +'/'+ name +'/' + row,
 					'dataType': "json",
